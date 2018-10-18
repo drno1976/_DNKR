@@ -111,4 +111,6 @@ public Hex setTo(int x, int y) {
 public Hex translated(int dx, int dy) {
   return cloned().translate(dx,dy);
 }
+
+
 }

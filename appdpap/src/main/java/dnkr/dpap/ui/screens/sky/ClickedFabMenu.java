@@ -1,7 +1,7 @@
-package dnkr.dpap.ui.sky;
+package dnkr.dpap.ui.screens.sky;
 import android.view.View;
 
-class ClickedFabMenu implements View.OnClickListener {
+public class ClickedFabMenu implements View.OnClickListener {
 private final SkyScreen skyScreen;
 
 public ClickedFabMenu(SkyScreen skyScreen) {

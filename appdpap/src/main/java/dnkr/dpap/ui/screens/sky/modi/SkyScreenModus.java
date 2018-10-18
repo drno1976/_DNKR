@@ -1,11 +1,13 @@
-package dnkr.dpap.ui.sky.modi;
+package dnkr.dpap.ui.screens.sky.modi;
+import dnkr.appbase.buttons.ButtonUi;
 import dnkr.appbase.gdx.base.Modus;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.data.PlaneListen;
 import dnkr.dpap.data.uistates.UiState;
 import dnkr.dpap.model.Plane;
+import dnkr.dpap.ui.assets.DpapFabFabrik;
 import dnkr.dpap.ui.base.HexScreenModus;
-import dnkr.dpap.ui.sky.SkyScreen;
+import dnkr.dpap.ui.screens.sky.SkyScreen;
 
 class SkyScreenModus extends HexScreenModus {
 private final SkyScreen skyScreen;
@@ -29,5 +31,17 @@ protected PlaneListen getPlaneListen() {
 
 protected Modus getModusFor(Plane plane) {
   return new SkyScreenModusSelectedOwn(getSkyScreen());
+}
+
+protected ButtonUi getMenuButtonUi() {
+  return skyScreen.getButtonUis().getMenuButtonUi();
+}
+
+protected DpapFabFabrik getFabFabrik() {
+  return skyScreen.getButtonUis().getFabFabrik();
+}
+
+protected ButtonUi getActionButtonUi() {
+  return skyScreen.getButtonUis().getActionButtonUi();
 }
 }

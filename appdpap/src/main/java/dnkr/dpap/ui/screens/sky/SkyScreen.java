@@ -1,9 +1,9 @@
-package dnkr.dpap.ui.sky;
+package dnkr.dpap.ui.screens.sky;
 import dnkr.appbase.gdx.base.Modus;
 import dnkr.appbase.gdx.base.ModusStageScreen;
 import dnkr.dpap.ui.DpapGdxUi;
 import dnkr.dpap.ui.base.ButtonUis;
-import dnkr.dpap.ui.sky.modi.SkyScreenModusUnselected;
+import dnkr.dpap.ui.screens.sky.modi.SkyScreenModusUnselected;
 
 public class SkyScreen extends ModusStageScreen {
 private final SkyActorManager actorManager;
@@ -13,8 +13,6 @@ public SkyScreen(DpapGdxUi gdxUi) {
   super(gdxUi);
   actorManager = new SkyActorManager(this);
   buttonUis = new ButtonUis(gdxUi);
-  buttonUis.getMenuButtonUi().addButton(buttonUis.getFabFabrik().getMenuFab(new ClickedFabMenu(this)));
-  buttonUis.getMenuButtonUi().addButton(buttonUis.getFabFabrik().getDoneAllFab(new ClickedFabDonePlanung(this)));
 }
 
 public ButtonUis getButtonUis() {

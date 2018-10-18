@@ -19,4 +19,8 @@ public void doActivate() {
   this.setVisible(true);
   this.setPositionWithHex(Games.getGameData().getUiState().getPlaneSelection().getSelected().getHexOrt().getHex());
 }
+
+public void doDeactivate() {
+  this.setVisible(false);
+}
 }

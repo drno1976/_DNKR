@@ -3,7 +3,6 @@ import dnkr.dpap.data.uistates.UiState;
 import dnkr.dpap.model.PlaneTypes;
 
 public class GameData {
-
 private final UiState uiState;
 private final PlaneListen planeListen;
 private final MetaDaten metaDaten;
@@ -14,19 +13,17 @@ public GameData() {
   uiState = new UiState();
   planeListen = new PlaneListen(this);
   metaDaten = new MetaDaten();
-  
 }
 
 public UiState getUiState() {
   return uiState;
 }
 
-
 public PlaneListen getPlaneListen() {
   return planeListen;
 }
 
-protected String getNextId() {
+public String getNextId() {
   return metaDaten.getNextId();
 }
 

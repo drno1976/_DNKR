@@ -1,4 +1,5 @@
-package dnkr.dpap.ui.sky;
+package dnkr.dpap.ui.screens.sky;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import dnkr.appbase.gdx.actors.ActorLayer;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.dpap.data.Games;
@@ -15,5 +16,11 @@ public PlaneLayer(ActorManager actorManager) {
 
 private PlaneActor create(Plane plane) {
   return new PlaneActor(getActorManager(), plane);
+}
+
+public void prepareMoving() {
+  for (Actor child : this.getChildren()) {
+    ((PlaneActor) child).prepareMoving();
+  }
 }
 }

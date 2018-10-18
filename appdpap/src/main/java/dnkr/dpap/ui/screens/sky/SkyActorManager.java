@@ -1,4 +1,4 @@
-package dnkr.dpap.ui.sky;
+package dnkr.dpap.ui.screens.sky;
 import android.support.annotation.NonNull;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.FpsLabel;
@@ -28,5 +28,9 @@ public void fillStage() {
 
 public SelectionMarker getSelectionMarker() {
   return selectionMarker;
+}
+
+public void prepareMoving() {
+  planeLayer.prepareMoving();
 }
 }

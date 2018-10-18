@@ -1,6 +1,7 @@
 package dnkr.appbase.buttons;
 import android.support.design.widget.FloatingActionButton;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import dnkr.appbase.activitys.UiHandler;
@@ -50,5 +51,19 @@ public void hide() {
 public FloatingActionButton addButton(FloatingActionButton fab) {
   UiHandler.run(() -> layoutButtons.addView(fab));
   return fab;
+}
+
+public void removeButton(String buttonId) {
+  final View viewWithTag = layoutButtons.findViewWithTag(buttonId);
+  System.out.println("Removed = " + buttonId);
+  if (viewWithTag == null) {
+    System.out.println("Not found: " + buttonId);
+  } else {
+    UiHandler.run(() -> layoutButtons.removeView(viewWithTag));
+  }
+}
+
+public void removeAll() {
+  UiHandler.run(() -> layoutButtons.removeAllViews());
 }
 }

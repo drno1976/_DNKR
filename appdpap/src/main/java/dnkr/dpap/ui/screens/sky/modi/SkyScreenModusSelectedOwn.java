@@ -1,24 +1,25 @@
-package dnkr.dpap.ui.sky.modi;
+package dnkr.dpap.ui.screens.sky.modi;
 import com.badlogic.gdx.math.Vector2;
 import dnkr.dpap.model.Plane;
 import dnkr.dpap.model.PlaneNotFound;
-import dnkr.dpap.ui.sky.SkyScreen;
+import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.libhex.Hex;
 
-public class SkyScreenModusUnselected extends SkyScreenModus {
-public SkyScreenModusUnselected(SkyScreen skyScreen) {
+public class SkyScreenModusSelectedOwn extends SkyScreenModus {
+public SkyScreenModusSelectedOwn(SkyScreen skyScreen) {
   super(skyScreen);
-  skyScreen.getButtonUis().getMenuButtonUi().addButton(skyScreen.getButtonUis().getFabFabrik().getNextFab(v -> doClickedNext()));
-}
-
-private void doClickedNext() {
-  System.out.println("Clicked NEXT");
+  skyScreen.getActorManager().getSelectionMarker().doActivate();
 }
 
 @Override
 public void tappedAt(Vector2 stagexy) {
   Hex tappedHex = getHexFor(stagexy);
+  if (isClickedSelected(tappedHex)) return;
   if (isClickedPlane(tappedHex)) return;
+}
+
+private boolean isClickedSelected(Hex tappedHex) {
+  return getUiState().getPlaneSelection().getSelected().getHexOrt().isAt(tappedHex);
 }
 
 private boolean isClickedPlane(Hex tappedHex) {
