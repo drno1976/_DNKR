@@ -11,7 +11,7 @@ public ClickedFabDonePlanung(SkyScreen skyScreen) {
 
 @Override
 public void onClick(View v) {
-  System.out.println("Clicked DONEALL");
+  System.out.println("Clicked DONEALL-Planung");
   skyScreen.getButtonUis().getMenuButtonUi().removeButton("DoneAll");
   skyScreen.getButtonUis().getMenuButtonUi().removeButton("Next");
   System.out.println("Change to resolve");

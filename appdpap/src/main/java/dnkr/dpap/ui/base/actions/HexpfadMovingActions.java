@@ -3,29 +3,27 @@ import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
 import dnkr.dpap.model.Plane;
+import dnkr.dpap.ui.UiPreferences;
 import dnkr.libhex.FacedHex;
-import dnkr.libhex.Hex;
 
-public class HexpfadMovingActions {
-private final Plane plane;
+public class HexpfadMovingActions extends MovingModusActions {
+private final float movingDuration;
 
 public HexpfadMovingActions(Plane plane) {
-  this.plane = plane;
+  super(plane);
+  movingDuration = UiPreferences.getPrefs().getMovingDuration();
 }
 
+@Override
 public Action getActions() {
   final SequenceAction sequence = Actions.sequence();
-   FacedHex start = plane.getHexOrt().getHex();
+  FacedHex start = plane.getHexOrt().getHex();
   for (int i = 0; i < 6; i++) {
-    final FacedHex turnedLeft = start.turnedLeft();
-    final Vector2FromHex pos = getPosFor(turnedLeft);
-    sequence.addAction(Actions.moveTo(pos.x,pos.y,2));
-    start=turnedLeft;
+    final FacedHex hex = start.getNextHex();
+    final Vector2FromHex pos = getPosFor(hex);
+    sequence.addAction(Actions.moveTo(pos.x, pos.y, movingDuration / 6));
+    start = hex;
   }
   return sequence;
-}
-
-private Vector2FromHex getPosFor(Hex hex) {
-  return new Vector2FromHex(hex);
 }
 }

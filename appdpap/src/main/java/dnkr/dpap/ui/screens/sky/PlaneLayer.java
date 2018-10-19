@@ -23,4 +23,10 @@ public void prepareMoving() {
     ((PlaneActor) child).prepareMoving();
   }
 }
+
+public void resetMoving() {
+  for (Actor child : this.getChildren()) {
+    ((PlaneActor) child).resetMoving();
+  }
+}
 }

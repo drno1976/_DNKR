@@ -33,4 +33,8 @@ public SelectionMarker getSelectionMarker() {
 public void prepareMoving() {
   planeLayer.prepareMoving();
 }
+
+public void resetMoving() {
+  planeLayer.resetMoving();
+}
 }

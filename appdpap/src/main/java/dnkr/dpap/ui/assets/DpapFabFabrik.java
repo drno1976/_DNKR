@@ -19,7 +19,7 @@ public FloatingActionButton getPauseFab(View.OnClickListener onClickListener) {
 public FloatingActionButton getReplayFab(View.OnClickListener onClickListener) {
   final FloatingActionButton fab = createDefaultFAB(onClickListener);
   fab.setImageResource(R.drawable.ic_replay_white_48dp);
-  fab.setTag("replay");
+  fab.setTag("Replay");
   return fab;
 }
 

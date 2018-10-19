@@ -16,15 +16,17 @@ public PlaneActor(ActorManager actorManager, Plane plane) {
 }
 
 public void prepareMoving() {
-  this.clearActions();
-  setPositionWithHex(getPlane().getHexOrt().getHex());
-  setRotationWithHex(getPlane().getHexOrt().getHex());
+  resetMoving();
   this.addAction(new HexpfadMovingActions(getPlane()).getActions());
-  
-  
 }
 
 private Plane getPlane() {
   return (Plane) getUserObject();
+}
+
+public void resetMoving() {
+  this.clearActions();
+  setPositionWithHex(getPlane().getHexOrt().getHex());
+  setRotationWithHex(getPlane().getHexOrt().getHex());
 }
 }

@@ -55,11 +55,11 @@ public FloatingActionButton addButton(FloatingActionButton fab) {
 
 public void removeButton(String buttonId) {
   final View viewWithTag = layoutButtons.findViewWithTag(buttonId);
-  System.out.println("Removed = " + buttonId);
   if (viewWithTag == null) {
     System.out.println("Not found: " + buttonId);
   } else {
     UiHandler.run(() -> layoutButtons.removeView(viewWithTag));
+    System.out.println("Removed = " + buttonId);
   }
 }
 
