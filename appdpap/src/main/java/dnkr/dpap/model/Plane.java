@@ -4,10 +4,12 @@ import dnkr.appbase.base.IdObject;
 public class Plane extends IdObject implements HasHexOrt {
 private final HexOrt hexOrt;
 private PlaneType type;
+private final Bewegungsplan bewegungsplan;
 
 public Plane(String id) {
   super(id);
   hexOrt = new HexOrt();
+  bewegungsplan = new PlaneBewegungsplan(this);
 }
 
 @Override
@@ -21,5 +23,9 @@ public void setType(PlaneType type) {
 
 public PlaneType getType() {
   return type;
+}
+
+public Bewegungsplan getBewegungsplan() {
+  return bewegungsplan;
 }
 }

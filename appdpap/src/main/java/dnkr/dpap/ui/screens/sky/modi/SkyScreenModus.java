@@ -30,7 +30,7 @@ protected PlaneListen getPlaneListen() {
 }
 
 protected Modus getModusFor(Plane plane) {
-  return new SkyScreenModusSelectedOwn(getSkyScreen());
+  return new PlanungModusSelectedOwn(getSkyScreen());
 }
 
 protected ButtonUi getMenuButtonUi() {

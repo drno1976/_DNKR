@@ -8,6 +8,7 @@ public class SkyActorManager extends ActorManager {
 private final SkyScreen screen;
 private final PlaneLayer planeLayer;
 private final SelectionMarker selectionMarker;
+private final WegplanLayer wegplanLayer;
 
 public SkyActorManager(@NonNull SkyScreen skyScreen) {
   super(skyScreen);
@@ -15,7 +16,12 @@ public SkyActorManager(@NonNull SkyScreen skyScreen) {
 //  pfadSchritteGroup = new PfadSchritteGroup(this);
 //  pathfindingCellsLayer = new PathfindingCellsLayer(this);
   planeLayer = new PlaneLayer(this);
+  wegplanLayer = new WegplanLayer(this);
   selectionMarker = new SelectionMarker(this);
+}
+
+public WegplanLayer getWegplanLayer() {
+  return wegplanLayer;
 }
 
 @Override
@@ -23,6 +29,7 @@ public void fillStage() {
   removeAllActorsfromStage();
   addToStage(selectionMarker);
   addToStage(planeLayer);
+  addToStage(wegplanLayer);
   addToStage(new FpsLabel());
 }
 

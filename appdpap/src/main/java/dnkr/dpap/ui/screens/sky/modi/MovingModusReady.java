@@ -1,23 +1,20 @@
 package dnkr.dpap.ui.screens.sky.modi;
 import com.badlogic.gdx.math.Vector2;
-import dnkr.dpap.ui.screens.sky.ClickedFabDoneMoving;
-import dnkr.dpap.ui.screens.sky.ClickedFabDonePlanung;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.libhex.Hex;
 
-public class SkyScreenModusMovingFinished extends SkyScreenModus {
-public SkyScreenModusMovingFinished(SkyScreen skyScreen) {
+public class MovingModusReady extends MovingModus {
+public MovingModusReady(SkyScreen skyScreen) {
   super(skyScreen);
-  getActionButtonUi().addButton(getFabFabrik().getReplayFab(v -> doClickedReplay()));
+  getActionButtonUi().addButton(getFabFabrik().getPlayFab(v -> doClickedPlay()));
   skyScreen.getActorManager().getSelectionMarker().doDeactivate();
-  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new ClickedFabDoneMoving(skyScreen)));
 }
 
-private void doClickedReplay() {
-  System.out.println("Clicked replay");
-  getActionButtonUi().removeButton("Replay");
-  getSkyScreen().getActorManager().resetMoving();
-  setModusTo(new SkyScreenModusMovingReady(getSkyScreen()));
+private void doClickedPlay() {
+  System.out.println("Clicked play");
+  getSkyScreen().getActorManager().prepareMoving();
+  getActionButtonUi().removeButton("Play");
+  setModusTo(new MovingModusFinished(getSkyScreen()));
 }
 
 @Override

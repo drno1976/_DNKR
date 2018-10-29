@@ -2,5 +2,16 @@
 <resources>
   <color name="colorPrimary">#008577</color>
   <color name="colorPrimaryDark">#00574B</color>
-  <color name="colorAccent">#D81B60</color>
+  <color name="colorAccent">#ffff8800</color> <!--FAB color-->
+  <!--<color name="colorAccent">#D81B60</color> -->
+  
+  <color name="accent_material_light">#ffcf40</color>
+  <color name="accent_material_dark">#d5002699</color>
+  <color name="dpap_orange">#ffff8800</color>
+  <color name="dpap_orange_light">#ffffbb33</color>
+  <color name="dpap_bg_lightgrau">#3C3F41</color>
+  <color name="dpap_bg_dunkelgrau">#aa2b2b2b</color>
+  <color name="dpap_bg_hellblau">#279de1</color>
+  <color name="common_google_signin_btn_text_dark_pressed">#0288D1</color>
+  <color name="common_google_signin_btn_text_dark_default">#330288D1</color>
 </resources>

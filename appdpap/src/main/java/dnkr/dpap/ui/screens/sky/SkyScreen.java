@@ -3,7 +3,7 @@ import dnkr.appbase.gdx.base.Modus;
 import dnkr.appbase.gdx.base.ModusStageScreen;
 import dnkr.dpap.ui.DpapGdxUi;
 import dnkr.dpap.ui.base.ButtonUis;
-import dnkr.dpap.ui.screens.sky.modi.SkyScreenModusUnselected;
+import dnkr.dpap.ui.screens.sky.modi.PlanungModusUnselected;
 
 public class SkyScreen extends ModusStageScreen {
 private final SkyActorManager actorManager;
@@ -31,6 +31,6 @@ public void show() {
 }
 
 private Modus chooseModusAtShow() {
-  return new SkyScreenModusUnselected(this);
+  return new PlanungModusUnselected(this);
 }
 }

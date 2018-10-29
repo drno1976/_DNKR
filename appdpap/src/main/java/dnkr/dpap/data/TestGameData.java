@@ -8,6 +8,9 @@ public TestGameData() {
   super();
   createPlanes();
 //  createPlanesViele();
+  for (Plane plane : this.getPlaneListen().getPlanesOnMap().asList()) {
+    plane.getBewegungsplan().init();
+  }
 }
 
 private void createPlanes() {

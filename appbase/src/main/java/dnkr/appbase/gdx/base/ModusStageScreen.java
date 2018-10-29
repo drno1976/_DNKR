@@ -27,7 +27,8 @@ public void show() {
 }
 
 public void render(float delta) {
-  Gdx.gl.glClearColor(0, 0, 128, 1);
+//  Gdx.gl.glClearColor(0, 0, 128, 1); BLUE
+//  Gdx.gl.glClearColor(43, 43, 43, 1);
   Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
   modusStage.act();
   modusStage.draw();

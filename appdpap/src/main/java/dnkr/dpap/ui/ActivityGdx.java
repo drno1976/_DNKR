@@ -9,7 +9,6 @@ public class ActivityGdx extends FullscreenApplication {
 @Override
 protected void onCreate(Bundle savedInstanceState) {
   super.onCreate(savedInstanceState);
-  doFullscreen();
   Games.checkGameData(this);
   RelativeLayout layoutGameUi = new RelativeLayout(this); // Create the layoutGameUi
   final View gdxView = initializeForView(new DpapGdxUi(getContext(), layoutGameUi));
@@ -18,5 +17,18 @@ protected void onCreate(Bundle savedInstanceState) {
 //  layoutGameUi.addView(adView, getLayoutForAdmob());// Add the AdMob view
   setContentView(layoutGameUi); // Hook it all up
   
+}
+
+@Override
+protected void onResume() {
+  super.onResume();
+  doFullscreen();
+  
+}
+
+@Override
+public void onWindowFocusChanged(boolean hasFocus) {
+  super.onWindowFocusChanged(hasFocus);
+  doFullscreen();
 }
 }
