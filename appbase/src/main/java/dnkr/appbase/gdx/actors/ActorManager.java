@@ -5,7 +5,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import dnkr.appbase.gdx.assets.TextureManager;
 import dnkr.appbase.gdx.base.ModusStageScreen;
 
-public abstract class ActorManager {
+public abstract class ActorManager  implements VisualForModel{
 private final ModusStageScreen screen;
 
 public ActorManager(@NonNull ModusStageScreen screen) {
@@ -28,4 +28,6 @@ public void removeAllActorsfromStage() {
 public void addToStage(Actor actor) {
   screen.getStage().addActor(actor);
 }
+
+
 }

@@ -1,11 +1,11 @@
 package dnkr.vkngs.uis.actors;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
-import dnkr.appbase.gdx.actors.TiledActorLayer;
+import dnkr.appbase.gdx.actors.TiledManagedGroup;
 import dnkr.vkngs.model.FigurSlot;
 import dnkr.vkngs.uis.screens.btt.BttActorManager;
 
-public class FigurLayer extends TiledActorLayer {
+public class FigurLayer extends TiledManagedGroup {
 private final BttActorManager bttActorManager;
 
 public FigurLayer(BttActorManager bttActorManager) {

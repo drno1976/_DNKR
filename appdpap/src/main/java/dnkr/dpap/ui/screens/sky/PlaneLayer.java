@@ -1,32 +1,38 @@
 package dnkr.dpap.ui.screens.sky;
 import com.badlogic.gdx.scenes.scene2d.Actor;
-import dnkr.appbase.gdx.actors.ActorLayer;
 import dnkr.appbase.gdx.actors.ActorManager;
+import dnkr.appbase.gdx.actors.Layer;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.model.Plane;
-import dnkr.dpap.ui.base.PlaneActor;
+import dnkr.dpap.ui.base.actors.PlaneVisual;
 
-class PlaneLayer extends ActorLayer {
+class PlaneLayer extends Layer {
 public PlaneLayer(ActorManager actorManager) {
   super(actorManager);
-  for (Plane plane : Games.getGameData().getPlaneListen().getPlanesOnMap().asList()) {
-    addActor(create(plane));
-  }
+  doModelChanged();
 }
 
-private PlaneActor create(Plane plane) {
-  return new PlaneActor(getActorManager(), plane);
+private PlaneVisual create(Plane plane) {
+  return new PlaneVisual(getActorManager(), plane);
 }
 
 public void prepareMoving() {
   for (Actor child : this.getChildren()) {
-    ((PlaneActor) child).prepareMoving();
+    ((PlaneVisual) child).prepareMoving();
   }
 }
 
 public void resetMoving() {
   for (Actor child : this.getChildren()) {
-    ((PlaneActor) child).resetMoving();
+    ((PlaneVisual) child).resetMoving();
+  }
+}
+
+@Override
+public void doModelChanged() {
+  removeChildrenFromStage();
+  for (Plane plane : Games.getGameData().getPlaneListen().getPlanesOnMap().asList()) {
+    addActor(create(plane));
   }
 }
 }

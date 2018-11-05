@@ -9,12 +9,27 @@ public class PlanungModusSelectedOwn extends PlanungModus {
 public PlanungModusSelectedOwn(SkyScreen skyScreen) {
   super(skyScreen);
   skyScreen.getActorManager().getSelectionMarker().doActivate();
+  skyScreen.getActorManager().getLayers().wegplanLayer.doModelChanged();
+  getActionButtonUi().removeAll();
+  getActionButtonUi().addButton(getFabFabrik().getMoveFab(v -> doClickedMoveplotting()));
+}
+
+private void doClickedMoveplotting() {
+  doClear();
+  setModusTo(new PlanungModusMoveplotting(getSkyScreen()));
+}
+
+private void doClear() {
+  getActionButtonUi().removeAll();
 }
 
 @Override
 public void tappedAt(Vector2 stagexy) {
   Hex tappedHex = getHexFor(stagexy);
-  if (isClickedSelected(tappedHex)) return;
+  if (isClickedSelected(tappedHex)) {
+    doClickedMoveplotting();
+    return;
+  }
   if (isClickedPlane(tappedHex)) return;
 }
 
@@ -26,6 +41,7 @@ private boolean isClickedPlane(Hex tappedHex) {
   try {
     final Plane planeAtHex = getPlaneListen().getPlanesOnMap().getByHex(tappedHex);
     getUiState().getPlaneSelection().setSelected(planeAtHex);
+    doClear();
     setModusTo(getModusFor(planeAtHex));
   } catch (PlaneNotFound planeNotFound) {
     planeNotFound.printStackTrace();

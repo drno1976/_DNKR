@@ -1,16 +1,14 @@
 package dnkr.appbase.gdx.actors;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import dnkr.appbase.gdx.assets.TextureManager;
 
-public class ActorLayer extends Group {
-private final ActorManager actorManager;
+class ManagedGroup extends Group {
+protected final ActorManager actorManager;
 
-public ActorLayer(ActorManager actorManager) {
+ManagedGroup(ActorManager actorManager) {
   this.actorManager = actorManager;
 }
 
@@ -32,11 +30,5 @@ public Label.LabelStyle createLabelStyle() {
 
 public TextureRegion getTexture(String name) {
   return actorManager.getTextureManager().getTexture(name);
-}
-
-public void removeChildrenFromStage() {
-  for (Actor child : getChildren()) {
-    child.addAction(Actions.removeActor());
-  }
 }
 }

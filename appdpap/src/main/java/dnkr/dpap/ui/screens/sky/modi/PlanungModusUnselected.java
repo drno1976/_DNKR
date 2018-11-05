@@ -3,7 +3,7 @@ import com.badlogic.gdx.math.Vector2;
 import java.util.Collection;
 import dnkr.dpap.model.Plane;
 import dnkr.dpap.model.PlaneNotFound;
-import dnkr.dpap.ui.screens.sky.ClickedFabDonePlanung;
+import dnkr.dpap.ui.screens.sky.DonePlanungClickedFab;
 import dnkr.dpap.ui.screens.sky.ClickedFabMenu;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.libhex.Hex;
@@ -13,7 +13,7 @@ public PlanungModusUnselected(SkyScreen skyScreen) {
   super(skyScreen);
   getMenuButtonUi().removeAll();
   getMenuButtonUi().addButton(getFabFabrik().getMenuFab(new ClickedFabMenu(skyScreen)));
-  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new ClickedFabDonePlanung(skyScreen)));
+  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new DonePlanungClickedFab(skyScreen)));
   getMenuButtonUi().addButton(getFabFabrik().getNextFab(v -> doClickedNext()));
   skyScreen.getActorManager().getSelectionMarker().doDeactivate();
 }

@@ -1,6 +1,6 @@
 package dnkr.dpap.ui.screens.sky.modi;
 import com.badlogic.gdx.math.Vector2;
-import dnkr.dpap.ui.screens.sky.ClickedFabDoneMoving;
+import dnkr.dpap.ui.screens.sky.DoneMovingClickedFab;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.libhex.Hex;
 
@@ -9,7 +9,7 @@ public MovingModusFinished(SkyScreen skyScreen) {
   super(skyScreen);
   getActionButtonUi().addButton(getFabFabrik().getReplayFab(v -> doClickedReplay()));
   skyScreen.getActorManager().getSelectionMarker().doDeactivate();
-  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new ClickedFabDoneMoving(skyScreen)));
+  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new DoneMovingClickedFab(skyScreen)));
 }
 
 private void doClickedReplay() {

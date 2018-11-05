@@ -18,12 +18,15 @@ public HexpfadMovingActions(Plane plane) {
 public Action getActions() {
   final SequenceAction sequence = Actions.sequence();
   FacedHex start = plane.getHexOrt().getHex();
-  for (int i = 0; i < 6; i++) {
-    final FacedHex hex = start.getNextHex();
-    final Vector2FromHex pos = getPosFor(hex);
-    sequence.addAction(Actions.moveTo(pos.x, pos.y, movingDuration / 6));
-    start = hex;
-  }
+  final FacedHex zielHex =           plane.getBewegungsplan().getZielHex();
+  final Vector2FromHex pos = getPosFor(zielHex);
+  sequence.addAction(Actions.moveTo(pos.x, pos.y, movingDuration ));
+//  for (int i = 0; i < 6; i++) {
+//    final FacedHex hex = start.getNextHex();
+//    final Vector2FromHex pos = getPosFor(hex);
+//    sequence.addAction(Actions.moveTo(pos.x, pos.y, movingDuration / 6));
+//    start = hex;
+//  }
   return sequence;
 }
 }

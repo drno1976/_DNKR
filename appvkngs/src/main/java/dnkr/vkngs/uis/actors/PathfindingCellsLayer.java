@@ -3,13 +3,13 @@ import android.support.annotation.NonNull;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import java.util.Queue;
-import dnkr.appbase.gdx.actors.TiledActorLayer;
+import dnkr.appbase.gdx.actors.TiledManagedGroup;
 import dnkr.appbase.gdx.actors.TiledActorManager;
 import dnkr.appbase.gdx.tiled.CellPos;
 import dnkr.vkngs.uis.maps.TiledMapPathFinding;
 import dnkr.vkngs.uis.maps.ValueCellPoint;
 
-public class PathfindingCellsLayer extends TiledActorLayer {
+public class PathfindingCellsLayer extends TiledManagedGroup {
 private final Vector2 offset;
 private final Label.LabelStyle labelStyle;
 

@@ -4,8 +4,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
 
 public class CenteredImage extends Image {
-public CenteredImage(TextureRegion texture) {
-  super(texture);
+public CenteredImage(TextureRegion region) {
+  super(region);
   setOrigin(Align.center);
   setPosition(-getWidth() / 2, -getHeight() / 2);
 }

@@ -1,15 +1,15 @@
-package dnkr.dpap.ui.base;
+package dnkr.dpap.ui.base.actors;
 import dnkr.appbase.base.IdObject;
 import dnkr.appbase.gdx.actors.ActorManager;
-import dnkr.appbase.gdx.actors.IdObjectActor;
+import dnkr.appbase.gdx.actors.IdGroupVisual;
 import dnkr.libhex.FacedHex;
 import dnkr.libhex.Hex;
 import static dnkr.libhex.HexKonstanten.VERSATZX;
 import static dnkr.libhex.HexKonstanten.VERSATZY;
 import static dnkr.libhex.HexKonstanten.VERSATZYhalb;
 
-public class HexActor extends IdObjectActor {
-public HexActor(ActorManager actorManager, IdObject idObject) {
+public abstract class HexGroupVisual extends IdGroupVisual {
+public HexGroupVisual(ActorManager actorManager, IdObject idObject) {
   super(actorManager, idObject);
 }
 
@@ -29,16 +29,22 @@ public void setRotationForFacing(byte facing) {
   switch (facing) {
     case 0:
       setRotation(0);
+      break;
     case 1:
       setRotation(-60);
+      break;
     case 2:
       setRotation(-120);
+      break;
     case 3:
       setRotation(180);
+      break;
     case 4:
       setRotation(+120);
+      break;
     case 5:
       setRotation(60);
+      break;
   }
 }
 }

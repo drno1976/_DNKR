@@ -2,34 +2,28 @@ package dnkr.dpap.ui.screens.sky;
 import android.support.annotation.NonNull;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.FpsLabel;
-import dnkr.dpap.ui.base.SelectionMarker;
+import dnkr.dpap.ui.base.actors.SelectionMarker;
 
 public class SkyActorManager extends ActorManager {
 private final SkyScreen screen;
-private final PlaneLayer planeLayer;
 private final SelectionMarker selectionMarker;
-private final WegplanLayer wegplanLayer;
+private final SkyScreenLayers layers;
 
 public SkyActorManager(@NonNull SkyScreen skyScreen) {
   super(skyScreen);
   this.screen = skyScreen;
+  layers = new SkyScreenLayers(this);
 //  pfadSchritteGroup = new PfadSchritteGroup(this);
 //  pathfindingCellsLayer = new PathfindingCellsLayer(this);
-  planeLayer = new PlaneLayer(this);
-  wegplanLayer = new WegplanLayer(this);
   selectionMarker = new SelectionMarker(this);
-}
-
-public WegplanLayer getWegplanLayer() {
-  return wegplanLayer;
 }
 
 @Override
 public void fillStage() {
   removeAllActorsfromStage();
   addToStage(selectionMarker);
-  addToStage(planeLayer);
-  addToStage(wegplanLayer);
+  addToStage(layers.planeLayer);
+  addToStage(layers.wegplanLayer);
   addToStage(new FpsLabel());
 }
 
@@ -38,10 +32,20 @@ public SelectionMarker getSelectionMarker() {
 }
 
 public void prepareMoving() {
-  planeLayer.prepareMoving();
+  layers.planeLayer.prepareMoving();
 }
 
 public void resetMoving() {
-  planeLayer.resetMoving();
+  layers.planeLayer.resetMoving();
+}
+
+@Override
+public void doModelChanged() {
+  layers.planeLayer.doModelChanged();
+  layers.wegplanLayer.doModelChanged();
+}
+
+public SkyScreenLayers getLayers() {
+  return layers;
 }
 }

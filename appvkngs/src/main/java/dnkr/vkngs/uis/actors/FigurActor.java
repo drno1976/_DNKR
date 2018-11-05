@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import dnkr.appbase.gdx.actors.FigurAnimations;
 import dnkr.appbase.gdx.actors.LpcAnimatedActor;
 import dnkr.appbase.gdx.actors.LpcFigurAnimations;
-import dnkr.appbase.gdx.actors.TiledActorLayer;
+import dnkr.appbase.gdx.actors.TiledManagedGroup;
 import dnkr.appbase.gdx.actors.TiledActorManager;
 import dnkr.vkngs.model.FigurSlot;
 
-public class FigurActor extends TiledActorLayer {
+public class FigurActor extends TiledManagedGroup {
 private static final String PEOPLE_RAGNAR_PNG = "people/ragnar.png";
 private boolean busy;
 public final LpcFigurAnimations figurAnimations; //in 4 richtungen

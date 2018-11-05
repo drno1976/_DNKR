@@ -5,10 +5,10 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
 import dnkr.appbase.gdx.tiled.TiledMapHelper;
 
-public class TiledActorLayer extends ActorLayer {
+public class TiledManagedGroup extends Layer {
 private final TiledMapHelper mapHelper;
 
-public TiledActorLayer(TiledActorManager actorManager) {
+public TiledManagedGroup(TiledActorManager actorManager) {
   super(actorManager);
   mapHelper = actorManager.getMapHelper();
 }
@@ -27,5 +27,9 @@ public Image getCenteredInTile(@NonNull Image img) {
   img.setPosition((mapHelper.getTilePixel().getWidth() - img.getWidth()) / 2,
           (mapHelper.getTilePixel().getHeight() - img.getHeight()) / 2);
   return img;
+}
+
+@Override
+public void doModelChanged() {
 }
 }
