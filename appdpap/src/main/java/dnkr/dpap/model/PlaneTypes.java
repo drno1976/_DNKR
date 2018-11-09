@@ -5,6 +5,7 @@ public class PlaneTypes {
 public static final String VALKYR = "Valkyr";
 public static final String KYRASSIER = "Kyrassier";
 public static final String HORNET = "Hornet";
+public static final String WASP = "Wasp";
 private final HashMap<String, PlaneType> map;
 
 public PlaneTypes() {
@@ -16,6 +17,7 @@ private void fill() {
   add(new PlaneType(VALKYR));
   add(new PlaneType(KYRASSIER));
   add(new PlaneType(HORNET));
+  add(new PlaneType(WASP));
 }
 
 private PlaneType add(PlaneType type) {
