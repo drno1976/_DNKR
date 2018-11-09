@@ -1,7 +1,7 @@
 package dnkr.dpap.ui.screens.sky.modi;
 import com.badlogic.gdx.math.Vector2;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
-import dnkr.libhex.Hex;
+import dnkr.libhex.hex.Hex;
 
 public class MovingModusReady extends MovingModus {
 public MovingModusReady(SkyScreen skyScreen) {

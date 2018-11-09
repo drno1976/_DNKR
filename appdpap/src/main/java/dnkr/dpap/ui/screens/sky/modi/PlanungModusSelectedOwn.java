@@ -3,7 +3,7 @@ import com.badlogic.gdx.math.Vector2;
 import dnkr.dpap.model.Plane;
 import dnkr.dpap.model.PlaneNotFound;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
-import dnkr.libhex.Hex;
+import dnkr.libhex.hex.Hex;
 
 public class PlanungModusSelectedOwn extends PlanungModus {
 public PlanungModusSelectedOwn(SkyScreen skyScreen) {

@@ -1,7 +1,7 @@
 package dnkr.dpap.model.turns;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.model.Plane;
-import dnkr.libhex.FacedHex;
+import dnkr.libhex.hex.FacedHex;
 
 class MovementResolver implements Resolver {
 @Override

@@ -1,4 +1,4 @@
-package dnkr.libhex;
+package dnkr.libhex.hex;
 public class FacedHex extends Hex {
 //http://www.redblobgames.com/grids/hexagons/
 public static final byte N = 0, NE = 1, SE = 2, S = 3, SW = 4, NW = 5;

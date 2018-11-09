@@ -1,4 +1,4 @@
-package dnkr.libhex;
+package dnkr.libhex.hex;
 public class Hex {
 public int x, y;
 

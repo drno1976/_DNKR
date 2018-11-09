@@ -1,10 +1,10 @@
 package dnkr.dpap.ui.screens.sky;
 import java.util.ArrayList;
 import dnkr.dpap.model.Plane;
-import dnkr.libhex.FacedHex;
-import dnkr.libhex.GeparsteHexRoute;
-import dnkr.libhex.Hex;
-import dnkr.libhex.UniqueHexes;
+import dnkr.libhex.hex.FacedHex;
+import dnkr.libhex.hexes.GeparsteHexRoute;
+import dnkr.libhex.hex.Hex;
+import dnkr.libhex.hexes.UniqueHexes;
 
 public class Bewegungsfeld {
 private final ArrayList<Hex> feldHexes;

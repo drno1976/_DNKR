@@ -1,7 +1,7 @@
 package dnkr.dpap.data;
 import dnkr.dpap.model.Plane;
 import dnkr.dpap.model.PlaneTypes;
-import dnkr.libhex.FacedHex;
+import dnkr.libhex.hex.FacedHex;
 
 class TestGameData extends FabrikGameData {
 public TestGameData() {

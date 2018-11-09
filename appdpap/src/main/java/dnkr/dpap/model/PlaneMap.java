@@ -1,7 +1,7 @@
 package dnkr.dpap.model;
 import java.util.Collection;
 import java.util.HashMap;
-import dnkr.libhex.Hex;
+import dnkr.libhex.hex.Hex;
 
 public class PlaneMap {
 private final HashMap<String, Plane> map;

@@ -1,4 +1,4 @@
-package dnkr.libhex;
+package dnkr.libhex.hex;
 class Winkel {
 public static int getWinkelDegreesFor(Hex von, Hex zu) {
   final int feldkantey = 64;

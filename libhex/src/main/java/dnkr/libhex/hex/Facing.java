@@ -1,4 +1,4 @@
-package dnkr.libhex;
+package dnkr.libhex.hex;
 import java.awt.Point;
 
 public class Facing {

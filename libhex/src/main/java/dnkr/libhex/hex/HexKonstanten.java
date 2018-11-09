@@ -1,4 +1,4 @@
-package dnkr.libhex;
+package dnkr.libhex.hex;
 public class HexKonstanten {
 public static final int VERSATZX = 54;
 public static final int VERSATZY = 64;

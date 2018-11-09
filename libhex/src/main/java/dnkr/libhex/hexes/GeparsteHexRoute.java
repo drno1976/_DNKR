@@ -1,4 +1,6 @@
-package dnkr.libhex;
+package dnkr.libhex.hexes;
+import dnkr.libhex.hex.FacedHex;
+
 public class GeparsteHexRoute extends HexRoute {
 private final String schrittString;
 
@@ -15,7 +17,9 @@ public GeparsteHexRoute(FacedHex start, String schrittString) {
     if (c == 'l') {
       if (schrittString.charAt(i + 1) == 'r') {
         i++;
-        add(hex.turnLeft().getNextHex().turnRight());
+        final FacedHex nextHex = hex.turnLeft().getNextHex().turnRight();
+        add(nextHex);
+        hex = nextHex;
       } else {
         hex.turnLeft();
       }
@@ -23,7 +27,9 @@ public GeparsteHexRoute(FacedHex start, String schrittString) {
     if (c == 'r') {
       if (schrittString.charAt(i + 1) == 'l') {
         i++;
-        add(hex.turnRight().getNextHex().turnLeft());
+        final FacedHex nextHex = hex.turnRight().getNextHex().turnLeft();
+        add(nextHex);
+        hex=nextHex;
       } else {
         hex.turnRight();
       }

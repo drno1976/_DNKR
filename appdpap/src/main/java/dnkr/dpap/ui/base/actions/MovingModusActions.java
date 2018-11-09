@@ -1,7 +1,7 @@
 package dnkr.dpap.ui.base.actions;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import dnkr.dpap.model.Plane;
-import dnkr.libhex.Hex;
+import dnkr.libhex.hex.Hex;
 
 public abstract class MovingModusActions {
 protected final Plane plane;

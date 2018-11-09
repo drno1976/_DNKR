@@ -1,5 +1,7 @@
 package dnkr.dpap.model;
 import dnkr.appbase.base.IdObject;
+import dnkr.libhex.HasHexOrt;
+import dnkr.libhex.HexOrt;
 
 public class Plane extends IdObject implements HasHexOrt {
 private final HexOrt hexOrt;

@@ -1,5 +1,7 @@
-package dnkr.libhex;
-public class UniqueHexes extends java.util.ArrayList<dnkr.libhex.Hex> {
+package dnkr.libhex.hexes;
+import dnkr.libhex.hex.Hex;
+
+public class UniqueHexes extends java.util.ArrayList<Hex> {
 @Override
 public boolean add(Hex addHex) {
   for (Hex hex : this) {

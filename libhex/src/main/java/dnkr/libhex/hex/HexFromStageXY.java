@@ -1,4 +1,4 @@
-package dnkr.libhex;
+package dnkr.libhex.hex;
 import static java.lang.Math.round;
 
 public class HexFromStageXY extends Hex {

@@ -1,10 +1,10 @@
 package dnkr.dpap.ui.base.actors;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import dnkr.appbase.gdx.actors.CenteredImage;
-import dnkr.libhex.Hex;
-import static dnkr.libhex.HexKonstanten.VERSATZX;
-import static dnkr.libhex.HexKonstanten.VERSATZY;
-import static dnkr.libhex.HexKonstanten.VERSATZYhalb;
+import dnkr.libhex.hex.Hex;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZX;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZY;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZYhalb;
 
 public class HexCenteredImage extends CenteredImage {
 public HexCenteredImage(TextureRegion region, Hex hex) {

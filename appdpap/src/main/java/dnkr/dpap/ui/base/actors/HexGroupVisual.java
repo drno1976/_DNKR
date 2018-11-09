@@ -2,11 +2,11 @@ package dnkr.dpap.ui.base.actors;
 import dnkr.appbase.base.IdObject;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.IdGroupVisual;
-import dnkr.libhex.FacedHex;
-import dnkr.libhex.Hex;
-import static dnkr.libhex.HexKonstanten.VERSATZX;
-import static dnkr.libhex.HexKonstanten.VERSATZY;
-import static dnkr.libhex.HexKonstanten.VERSATZYhalb;
+import dnkr.libhex.hex.FacedHex;
+import dnkr.libhex.hex.Hex;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZX;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZY;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZYhalb;
 
 public abstract class HexGroupVisual extends IdGroupVisual {
 public HexGroupVisual(ActorManager actorManager, IdObject idObject) {

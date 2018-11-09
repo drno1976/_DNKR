@@ -6,7 +6,7 @@ import dnkr.dpap.model.PlaneNotFound;
 import dnkr.dpap.ui.screens.sky.ClickedFabMenu;
 import dnkr.dpap.ui.screens.sky.DonePlanungClickedFab;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
-import dnkr.libhex.Hex;
+import dnkr.libhex.hex.Hex;
 
 public class PlanungModusUnselected extends PlanungModus {
 public PlanungModusUnselected(SkyScreen skyScreen) {

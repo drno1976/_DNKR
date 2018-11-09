@@ -6,7 +6,7 @@ import dnkr.dpap.data.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import static dnkr.dpap.ui.assets.DpapAssets.ENDPUNKT_RICHTUNG_HUD;
 import dnkr.dpap.ui.base.actors.FacedHexCenteredImage;
-import dnkr.libhex.FacedHex;
+import dnkr.libhex.hex.FacedHex;
 
 public class WegplanLayer extends Layer {
 public WegplanLayer(ActorManager actorManager) {

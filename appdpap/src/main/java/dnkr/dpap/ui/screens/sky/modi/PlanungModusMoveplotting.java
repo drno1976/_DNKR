@@ -2,7 +2,7 @@ package dnkr.dpap.ui.screens.sky.modi;
 import com.badlogic.gdx.math.Vector2;
 import dnkr.dpap.ui.screens.sky.Bewegungsfeld;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
-import dnkr.libhex.Hex;
+import dnkr.libhex.hex.Hex;
 
 public class PlanungModusMoveplotting extends PlanungModus {
 private final Bewegungsfeld bewegungsfeld;

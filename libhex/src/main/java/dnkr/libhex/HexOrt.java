@@ -1,6 +1,6 @@
-package dnkr.dpap.model;
-import dnkr.libhex.FacedHex;
-import dnkr.libhex.Hex;
+package dnkr.libhex;
+import dnkr.libhex.hex.FacedHex;
+import dnkr.libhex.hex.Hex;
 
 public class HexOrt {
 private final FacedHex facedHex;

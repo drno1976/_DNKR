@@ -1,5 +1,5 @@
 package dnkr.dpap.model;
-import dnkr.libhex.FacedHex;
+import dnkr.libhex.hex.FacedHex;
 
 public class Bewegungsplan {
 private FacedHex zielHex;

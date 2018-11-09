@@ -2,8 +2,8 @@ package dnkr.dpap.ui.base;
 import com.badlogic.gdx.math.Vector2;
 import dnkr.appbase.gdx.base.ModusStageScreen;
 import dnkr.appbase.gdx.base.StageScreenModus;
-import dnkr.libhex.Hex;
-import dnkr.libhex.HexFromStageXY;
+import dnkr.libhex.hex.Hex;
+import dnkr.libhex.hex.HexFromStageXY;
 
 public class HexScreenModus extends StageScreenModus {
 public HexScreenModus(ModusStageScreen stageScreen) {

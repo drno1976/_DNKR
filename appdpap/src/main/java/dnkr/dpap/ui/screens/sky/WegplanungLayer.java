@@ -8,8 +8,8 @@ import dnkr.dpap.ui.assets.DpapAssets;
 import static dnkr.dpap.ui.assets.DpapAssets.ENDPUNKT_RICHTUNG_HUD;
 import dnkr.dpap.ui.base.actors.FacedHexCenteredImage;
 import dnkr.dpap.ui.base.actors.HexCenteredImage;
-import dnkr.libhex.FacedHex;
-import dnkr.libhex.Hex;
+import dnkr.libhex.hex.FacedHex;
+import dnkr.libhex.hex.Hex;
 
 public class WegplanungLayer extends Layer {
 private Bewegungsfeld bewegungsfeld;

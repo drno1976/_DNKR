@@ -4,7 +4,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
 import dnkr.dpap.model.Plane;
 import dnkr.dpap.ui.UiPreferences;
-import dnkr.libhex.FacedHex;
+import dnkr.libhex.hex.FacedHex;
 
 public class HexpfadMovingActions extends MovingModusActions {
 private final float movingDuration;
