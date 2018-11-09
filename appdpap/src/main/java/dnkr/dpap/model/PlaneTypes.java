@@ -18,6 +18,14 @@ private void fill() {
   add(new PlaneType(KYRASSIER));
   add(new PlaneType(HORNET));
   add(new PlaneType(WASP));
+  fillRoutes();
+}
+
+private void fillRoutes() {
+  getById(VALKYR).getRouten().fillWith(
+          "vvvvvv,vvvlrvv,vvvlvv,vvvrlvv,vvvvrvv,vvvrvv,vvrvv,vvrvrv");
+  getById(KYRASSIER).getRouten().fillWith(
+          "vvvvv,vvlrvv,vvvlvv,vvlvv,vvrlvv,vvvrvv,vvrvv");
 }
 
 private PlaneType add(PlaneType type) {

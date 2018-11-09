@@ -15,13 +15,15 @@ public GeparsteHexRoute(FacedHex start, String schrittString) {
       hex = nextHex;
     }
     if (c == 'l') {
-      if (schrittString.charAt(i + 1) == 'r') {
-        i++;
-        final FacedHex nextHex = hex.turnLeft().getNextHex().turnRight();
-        add(nextHex);
-        hex = nextHex;
-      } else {
-        hex.turnLeft();
+      if ((i + 1) < schrittString.length()) {
+        if (schrittString.charAt(i + 1) == 'r') {
+          i++;
+          final FacedHex nextHex = hex.turnLeft().getNextHex().turnRight();
+          add(nextHex);
+          hex = nextHex;
+        } else {
+          hex.turnLeft();
+        }
       }
     }
     if (c == 'r') {
@@ -29,7 +31,7 @@ public GeparsteHexRoute(FacedHex start, String schrittString) {
         i++;
         final FacedHex nextHex = hex.turnRight().getNextHex().turnLeft();
         add(nextHex);
-        hex=nextHex;
+        hex = nextHex;
       } else {
         hex.turnRight();
       }
