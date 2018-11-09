@@ -28,4 +28,8 @@ public PlaneType getType() {
 public Bewegungsplan getBewegungsplan() {
   return bewegungsplan;
 }
+
+public Bewegungsplaner getBewegungsplaner() {
+  return new Bewegungsplaner(hexOrt.getHex(), type.getRouten());
+}
 }

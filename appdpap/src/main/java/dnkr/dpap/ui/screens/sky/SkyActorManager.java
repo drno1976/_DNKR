@@ -22,8 +22,9 @@ public SkyActorManager(@NonNull SkyScreen skyScreen) {
 public void fillStage() {
   removeAllActorsfromStage();
   addToStage(selectionMarker);
-  addToStage(layers.planeLayer);
   addToStage(layers.wegplanLayer);
+  addToStage(layers.planeLayer);
+  addToStage(layers.wegplanungLayer);
   addToStage(new FpsLabel());
 }
 

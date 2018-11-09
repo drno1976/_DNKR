@@ -34,13 +34,13 @@ public void tappedAt(Vector2 stagexy) {
 }
 
 private boolean isClickedSelected(Hex tappedHex) {
-  return getUiState().getPlaneSelection().getSelected().getHexOrt().isAt(tappedHex);
+  return getPlaneSelection().getSelected().getHexOrt().isAt(tappedHex);
 }
 
 private boolean isClickedPlane(Hex tappedHex) {
   try {
     final Plane planeAtHex = getPlaneListen().getPlanesOnMap().getByHex(tappedHex);
-    getUiState().getPlaneSelection().setSelected(planeAtHex);
+    getPlaneSelection().setSelected(planeAtHex);
     doClear();
     setModusTo(getModusFor(planeAtHex));
   } catch (PlaneNotFound planeNotFound) {

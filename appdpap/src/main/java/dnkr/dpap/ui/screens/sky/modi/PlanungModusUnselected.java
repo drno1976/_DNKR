@@ -3,8 +3,8 @@ import com.badlogic.gdx.math.Vector2;
 import java.util.Collection;
 import dnkr.dpap.model.Plane;
 import dnkr.dpap.model.PlaneNotFound;
-import dnkr.dpap.ui.screens.sky.DonePlanungClickedFab;
 import dnkr.dpap.ui.screens.sky.ClickedFabMenu;
+import dnkr.dpap.ui.screens.sky.DonePlanungClickedFab;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.libhex.Hex;
 
@@ -22,8 +22,8 @@ private void doClickedNext() {
   System.out.println("Clicked NEXT");
   final Collection<Plane> list = getPlaneListen().getPlanesOnMap().asList();
   if (list.isEmpty()) return;
-  getUiState().getPlaneSelection().setSelected(list.iterator().next());
-  setModusTo(getModusFor(getUiState().getPlaneSelection().getSelected()));
+  getPlaneSelection().setSelected(list.iterator().next());
+  setModusTo(getModusFor(getPlaneSelection().getSelected()));
 }
 
 @Override
@@ -35,7 +35,7 @@ public void tappedAt(Vector2 stagexy) {
 private boolean isClickedPlane(Hex tappedHex) {
   try {
     final Plane planeAtHex = getPlaneListen().getPlanesOnMap().getByHex(tappedHex);
-    getUiState().getPlaneSelection().setSelected(planeAtHex);
+    getPlaneSelection().setSelected(planeAtHex);
     setModusTo(getModusFor(planeAtHex));
   } catch (PlaneNotFound planeNotFound) {
     planeNotFound.printStackTrace();

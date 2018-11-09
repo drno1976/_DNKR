@@ -12,28 +12,29 @@ import dnkr.libhex.FacedHex;
 import dnkr.libhex.Hex;
 
 public class WegplanungLayer extends Layer {
+private Bewegungsfeld bewegungsfeld;
+
 public WegplanungLayer(ActorManager actorManager) {
   super(actorManager);
 }
 
+public void setBewegungsfeld(Bewegungsfeld bewegungsfeld) {
+  this.bewegungsfeld = bewegungsfeld;
+}
+
 public void doModelChanged() {
   this.removeChildrenFromStage();
-  if (getPlaneSelection().isNone()) return;
-  final Bewegungsfeld bewegungsfeld = new Bewegungsfeld(getPlaneSelection().getSelected());
-  for (Hex hex : bewegungsfeld.getHexes()) {
+  if (bewegungsfeld == null) return;
+  for (Hex hex : bewegungsfeld.getFeldHexes()) {
     createFeldmarkerAt(hex);
   }
-  final FacedHex zielHex = getPlaneSelection().getSelected().getBewegungsplan().getZielHex();
-  createZielmarkerAt(zielHex);
+  for (FacedHex zielHex : bewegungsfeld.getZielHexes()) {
+    this.addActor(new FacedHexCenteredImage(getTexture(ENDPUNKT_RICHTUNG_HUD), zielHex));
+  }
 }
 
 private void createFeldmarkerAt(Hex hex) {
-  final CenteredImage marker = new HexCenteredImage(getTexture(DpapAssets.MARKER_HEX_GREEN),hex);
-  this.addActor(marker);
-}
-
-private void createZielmarkerAt(FacedHex hex) {
-  final CenteredImage marker = new FacedHexCenteredImage(getTexture(ENDPUNKT_RICHTUNG_HUD),hex);
+  final CenteredImage marker = new HexCenteredImage(getTexture(DpapAssets.MARKER_HEX_GREEN), hex);
   this.addActor(marker);
 }
 

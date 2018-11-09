@@ -12,6 +12,6 @@ public PlaneBewegungsplan(Plane plane) {
 @Override
 public void init() {
   final FacedHex hex = plane.getHexOrt().getHex().cloned();
-  setZielHex(hex.getNextHex().getNextHex().getNextHex().getNextHex().getNextHex());
+  setZielHex(hex.getNextHex().getNextHex().getNextHex().getNextHex().getNextHex().getNextHex());
 }
 }
