@@ -2,20 +2,18 @@ package dnkr.dpap.model;
 import java.util.ArrayList;
 import dnkr.libhex.FacedHex;
 import dnkr.libhex.GeparsteHexRoute;
-import dnkr.libhex.HexRoute;
 
 public class Bewegungsplaner {
-private final ArrayList<HexRoute> hexRoutes;
+private final ArrayList<GeparsteHexRoute> hexRoutes;
 
 public Bewegungsplaner(FacedHex start, RoutenAsSchrittStrings routenAsSchrittStrings) {
   hexRoutes = new ArrayList<>();
   for (String schrittString : routenAsSchrittStrings) {
-    final HexRoute route = new GeparsteHexRoute(start, schrittString);
-    hexRoutes.add(route);
+    hexRoutes.add(new GeparsteHexRoute(start, schrittString));
   }
 }
 
-public ArrayList<HexRoute> getHexRoutes() {
+public ArrayList<GeparsteHexRoute> getHexRoutes() {
   return hexRoutes;
 }
 }

@@ -1,6 +1,9 @@
 package dnkr.libhex;
 public class GeparsteHexRoute extends HexRoute {
+private final String schrittString;
+
 public GeparsteHexRoute(FacedHex start, String schrittString) {
+  this.schrittString = schrittString;
   FacedHex hex = start.cloned();
   for (int i = 0; i < schrittString.length(); i++) {
     final char c = schrittString.charAt(i);
@@ -26,5 +29,9 @@ public GeparsteHexRoute(FacedHex start, String schrittString) {
       }
     }
   }
+}
+
+public String getSchrittString() {
+  return schrittString;
 }
 }
