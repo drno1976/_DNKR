@@ -39,6 +39,9 @@ private boolean isClickedSelected(Hex tappedHex) {
 }
 
 private boolean isClickedZielHex(Hex tappedHex) {
+  if (bewegungsfeld.getZielHexes().hasHexAt(tappedHex)) {
+    return true;
+  }
   return false;
 }
 

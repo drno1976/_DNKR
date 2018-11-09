@@ -8,11 +8,11 @@ import dnkr.libhex.UniqueHexes;
 
 public class Bewegungsfeld {
 private final ArrayList<Hex> feldHexes;
-private final ArrayList<FacedHex> zielHexes;
+private final ZielHexes zielHexes;
 
 public Bewegungsfeld(Plane plane) {
   feldHexes = new UniqueHexes();
-  zielHexes = new ArrayList<>();
+  zielHexes = new ZielHexes();
   for (HexRoute hexRoute : plane.getBewegungsplaner().getHexRoutes()) {
     for (FacedHex facedHex : hexRoute) {
       feldHexes.add(facedHex);
@@ -25,7 +25,7 @@ public ArrayList<Hex> getFeldHexes() {
   return feldHexes;
 }
 
-public ArrayList<FacedHex> getZielHexes() {
+public ZielHexes getZielHexes() {
   return zielHexes;
 }
 }
