@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 class RoutenAsSchrittStrings extends ArrayList<String> {
 public RoutenAsSchrittStrings() {
-  add("vvvvvv");
+//  add("vvvvvv");
 }
 
 public void fillWith(String allRoutes) {

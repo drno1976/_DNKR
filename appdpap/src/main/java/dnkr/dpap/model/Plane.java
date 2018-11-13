@@ -32,6 +32,6 @@ public Bewegungsplan getBewegungsplan() {
 }
 
 public Bewegungsplaner getBewegungsplaner() {
-  return new Bewegungsplaner(hexOrt.getHex(), type.getRouten());
+  return new Bewegungsplaner(hexOrt.getHex(), new PlaneRouten(this));
 }
 }
