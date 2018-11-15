@@ -26,7 +26,7 @@ private PlaneType add(PlaneType type) {
   return type;
 }
 
-public PlaneType getById(String typeID) {
-  return map.get(typeID);
+public PlaneType getById(String typeId) {
+  return map.get(typeId);
 }
 }
