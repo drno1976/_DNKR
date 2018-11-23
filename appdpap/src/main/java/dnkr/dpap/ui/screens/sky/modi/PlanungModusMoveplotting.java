@@ -1,5 +1,7 @@
 package dnkr.dpap.ui.screens.sky.modi;
 import com.badlogic.gdx.math.Vector2;
+import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.planes.PlaneNotFound;
 import dnkr.dpap.ui.screens.sky.Bewegungsfeld;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.libhex.hex.Hex;
@@ -17,12 +19,6 @@ public PlanungModusMoveplotting(SkyScreen skyScreen) {
   getActionButtonUi().addButton(getFabFabrik().getCancelFab(v -> doClickedCancel()));
 }
 
-private void doClickedCancel() {
-  getActionButtonUi().removeAll();
-  getSkyScreen().getActorManager().getLayers().wegplanungLayer.removeChildrenFromStage();
-  setModusTo(new PlanungModusSelectedOwn(getSkyScreen()));
-}
-
 @Override
 public void tappedAt(Vector2 stagexy) {
   Hex tappedHex = getHexFor(stagexy);
@@ -31,7 +27,33 @@ public void tappedAt(Vector2 stagexy) {
     return;
   }
   if (isClickedZielHex(tappedHex)) return;
+  if (isClickedPlane(tappedHex)) return;
+  
 //  if (isClickedPlane(tappedHex)) return;
+}
+
+private void doClickedCancel() {
+  doClear();
+  setModusTo(new PlanungModusSelectedOwn(getSkyScreen()));
+}
+
+private boolean isClickedPlane(Hex tappedHex) {
+  try {
+    final Plane planeAtHex = getPlaneListen().getPlanesOnMap().getByHex(tappedHex);
+    getPlaneSelection().setSelected(planeAtHex);
+    doClear();
+    setModusTo(new PlanungModusMoveplotting(getSkyScreen()));
+//    setModusTo(getModusFor(planeAtHex));
+  } catch (PlaneNotFound planeNotFound) {
+    planeNotFound.printStackTrace();
+    return false;
+  }
+  return true;
+}
+
+private void doClear() {
+  getActionButtonUi().removeAll();
+  getSkyScreen().getActorManager().getLayers().wegplanungLayer.removeChildrenFromStage();
 }
 
 private boolean isClickedSelected(Hex tappedHex) {

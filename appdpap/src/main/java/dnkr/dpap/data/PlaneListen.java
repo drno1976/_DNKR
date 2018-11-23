@@ -1,6 +1,6 @@
 package dnkr.dpap.data;
-import dnkr.dpap.model.Plane;
-import dnkr.dpap.model.PlaneMap;
+import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.planes.PlaneMap;
 
 public class PlaneListen {
 private final PlaneMap planesOnMap, planesAll;

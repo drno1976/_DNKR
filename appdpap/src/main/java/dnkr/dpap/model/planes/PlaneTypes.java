@@ -1,5 +1,6 @@
-package dnkr.dpap.model;
+package dnkr.dpap.model.planes;
 import java.util.HashMap;
+import dnkr.dpap.model.bewegungen.PlaneTypesManoverFabrik;
 
 public class PlaneTypes {
 public static final String VALKYR = "Valkyr";

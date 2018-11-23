@@ -1,6 +1,6 @@
 package dnkr.dpap.data;
 import dnkr.dpap.data.uistates.UiState;
-import dnkr.dpap.model.PlaneTypes;
+import dnkr.dpap.model.planes.PlaneTypes;
 
 public class GameData {
 private final UiState uiState;

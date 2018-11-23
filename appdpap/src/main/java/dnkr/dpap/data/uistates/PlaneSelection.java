@@ -1,7 +1,7 @@
 package dnkr.dpap.data.uistates;
 import dnkr.dpap.data.Games;
-import dnkr.dpap.model.Plane;
-import dnkr.dpap.model.PlaneNotFound;
+import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.planes.PlaneNotFound;
 public class PlaneSelection {
 private Plane selected;
 

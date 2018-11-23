@@ -4,7 +4,7 @@ import dnkr.appbase.gdx.base.Modus;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.data.PlaneListen;
 import dnkr.dpap.data.uistates.UiState;
-import dnkr.dpap.model.Plane;
+import dnkr.dpap.model.planes.Plane;
 import dnkr.dpap.ui.assets.DpapFabFabrik;
 import dnkr.dpap.ui.base.HexScreenModus;
 import dnkr.dpap.ui.screens.sky.SkyScreen;

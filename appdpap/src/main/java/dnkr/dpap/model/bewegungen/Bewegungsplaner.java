@@ -1,4 +1,4 @@
-package dnkr.dpap.model;
+package dnkr.dpap.model.bewegungen;
 import java.util.ArrayList;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hexes.GeparsteHexRoute;

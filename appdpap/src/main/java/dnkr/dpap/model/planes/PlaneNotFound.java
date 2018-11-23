@@ -1,4 +1,4 @@
-package dnkr.dpap.model;
+package dnkr.dpap.model.planes;
 import android.util.Log;
 
 public class PlaneNotFound extends Throwable {

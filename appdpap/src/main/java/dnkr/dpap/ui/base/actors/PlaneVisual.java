@@ -2,7 +2,7 @@ package dnkr.dpap.ui.base.actors;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.CenteredImage;
-import dnkr.dpap.model.Plane;
+import dnkr.dpap.model.planes.Plane;
 import dnkr.dpap.ui.assets.PlaneTextureIds;
 import dnkr.dpap.ui.base.actions.HexpfadMovingActions;
 

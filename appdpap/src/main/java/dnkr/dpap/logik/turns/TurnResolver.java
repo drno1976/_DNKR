@@ -1,4 +1,4 @@
-package dnkr.dpap.model.turns;
+package dnkr.dpap.logik.turns;
 public class TurnResolver implements Resolver {
 
 

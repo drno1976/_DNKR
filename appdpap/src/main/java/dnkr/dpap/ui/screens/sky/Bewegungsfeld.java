@@ -1,9 +1,9 @@
 package dnkr.dpap.ui.screens.sky;
 import java.util.ArrayList;
-import dnkr.dpap.model.Plane;
+import dnkr.dpap.model.planes.Plane;
 import dnkr.libhex.hex.FacedHex;
-import dnkr.libhex.hexes.GeparsteHexRoute;
 import dnkr.libhex.hex.Hex;
+import dnkr.libhex.hexes.GeparsteHexRoute;
 import dnkr.libhex.hexes.UniqueHexes;
 
 public class Bewegungsfeld {
@@ -18,7 +18,7 @@ public Bewegungsfeld(Plane plane) {
       feldHexes.add(facedHex);
     }
     zielHexes.add(hexRoute.getZiel());
-    System.out.println("hexRoute.getZiel().getSimplePosition() = " + hexRoute.getZiel().getSimplePosition());
+//    System.out.println("hexRoute.getZiel().getSimplePosition() = " + hexRoute.getZiel().getSimplePosition());
   }
 }
 

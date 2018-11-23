@@ -1,4 +1,4 @@
-package dnkr.dpap.model.turns;
+package dnkr.dpap.logik.turns;
 interface Resolver {
 void doResolve();
 }

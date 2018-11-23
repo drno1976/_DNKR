@@ -1,4 +1,4 @@
-package dnkr.dpap.model;
+package dnkr.dpap.model.planes;
 import java.util.Collection;
 import java.util.HashMap;
 import dnkr.libhex.hex.Hex;

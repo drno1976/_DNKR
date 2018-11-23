@@ -1,4 +1,4 @@
-package dnkr.dpap.model;
+package dnkr.dpap.model.bewegungen;
 import java.util.ArrayList;
 import java.util.Arrays;
 

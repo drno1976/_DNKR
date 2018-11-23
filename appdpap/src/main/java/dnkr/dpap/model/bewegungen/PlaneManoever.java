@@ -1,4 +1,7 @@
-package dnkr.dpap.model;
+package dnkr.dpap.model.bewegungen;
+import dnkr.libhex.hex.FacedHex;
+import dnkr.libhex.hexes.GeparsteHexRoute;
+
 public class PlaneManoever {
 private final String schrittString;
 
@@ -34,5 +37,9 @@ public PlaneManoever getMirrored() {
   }
   System.out.println("mirror = " + mirror);
   return new PlaneManoever(mirror.toString());
+}
+
+public FacedHex getZielGestartetVon(FacedHex vonHex) {
+  return new GeparsteHexRoute(vonHex, schrittString).getZiel();
 }
 }

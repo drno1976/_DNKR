@@ -3,7 +3,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.Layer;
 import dnkr.dpap.data.Games;
-import dnkr.dpap.model.Plane;
+import dnkr.dpap.model.planes.Plane;
 import dnkr.dpap.ui.base.actors.PlaneVisual;
 
 class PlaneLayer extends Layer {

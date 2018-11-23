@@ -1,8 +1,10 @@
-package dnkr.dpap.model;
-import static dnkr.dpap.model.PlaneTypes.KYRASSIER;
-import static dnkr.dpap.model.PlaneTypes.VALKYR;
+package dnkr.dpap.model.bewegungen;
+import dnkr.dpap.model.planes.PlaneType;
+import dnkr.dpap.model.planes.PlaneTypes;
+import static dnkr.dpap.model.planes.PlaneTypes.KYRASSIER;
+import static dnkr.dpap.model.planes.PlaneTypes.VALKYR;
 
-class PlaneTypesManoverFabrik {
+public class PlaneTypesManoverFabrik {
 private final PlaneTypes types;
 private PlaneType type;
 
@@ -17,7 +19,7 @@ public PlaneTypesManoverFabrik(PlaneTypes types) {
   add("vw", 4);
   addMirrored("r1", new PlaneManoever("vvrlv"));
   addMirrored("r2", new PlaneManoever("vvrv"));
-  addMirrored("r3", new PlaneManoever("vrvrv"));
+  addMirrored("r3", new PlaneManoever("vrv"));
   //"vvvvv,vvlrvv,vvvlvv,vvlvv,vvrlvv,vvvrvv,vvrvv");
 }
 
@@ -43,6 +45,3 @@ public void setType(String typeId) {
 }
 }
 
-/*
-"vvvvvv,vvvlrvv,vvvlvv,vvvrlvv,vvvvrvv,vvvrvv,vvrvv,vvrvrv");
- */

@@ -1,6 +1,6 @@
 package dnkr.dpap.data;
-import dnkr.dpap.model.Plane;
-import dnkr.dpap.model.PlaneType;
+import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.planes.PlaneType;
 
 class PlaneFabrik {
 private final GameData data;
