@@ -42,4 +42,8 @@ public PlaneManoever getMirrored() {
 public FacedHex getZielGestartetVon(FacedHex vonHex) {
   return new GeparsteHexRoute(vonHex, schrittString).getZiel();
 }
+
+public GeparsteHexRoute getGeparsteRouteVon(FacedHex vonHex) {
+  return new GeparsteHexRoute(vonHex, schrittString);
+}
 }

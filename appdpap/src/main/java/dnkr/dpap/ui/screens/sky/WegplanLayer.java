@@ -4,9 +4,11 @@ import dnkr.appbase.gdx.actors.CenteredImage;
 import dnkr.appbase.gdx.actors.Layer;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
+import dnkr.dpap.model.planes.Plane;
 import static dnkr.dpap.ui.assets.DpapAssets.ENDPUNKT_RICHTUNG_HUD;
 import dnkr.dpap.ui.base.actors.FacedHexCenteredImage;
 import dnkr.libhex.hex.FacedHex;
+import dnkr.libhex.hexes.GeparsteHexRoute;
 
 public class WegplanLayer extends Layer {
 public WegplanLayer(ActorManager actorManager) {
@@ -15,9 +17,16 @@ public WegplanLayer(ActorManager actorManager) {
 
 public void doModelChanged() {
   this.removeChildrenFromStage();
-  if (getPlaneSelection().isNone()) return;
-  final FacedHex zielHex = getPlaneSelection().getSelected().getBewegungsplan().getZielHex();
-  createZielmarkerAt(zielHex);
+  for (Plane plane : Games.getGameData().getPlaneListen().getPlanesOnMap().asList()) {
+    createWegmarkerFor(plane.getBewegungsplan().getGeparsteHexRoute());
+    createZielmarkerAt(plane.getBewegungsplan().getZielHex());
+  }
+}
+
+private void createWegmarkerFor(GeparsteHexRoute geparsteHexRoute) {
+  FacedHex start = geparsteHexRoute.getStart();
+  for (FacedHex facedHex : geparsteHexRoute) {
+  }
 }
 
 private void createZielmarkerAt(FacedHex hex) {

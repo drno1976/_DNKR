@@ -1,8 +1,10 @@
 package dnkr.dpap.model.bewegungen;
 import dnkr.dpap.model.planes.Plane;
+import dnkr.libhex.hexes.GeparsteHexRoute;
 
 public class PlaneBewegungsplan extends Bewegungsplan {
 private final Plane plane;
+private GeparsteHexRoute geparsteHexRoute;
 
 public PlaneBewegungsplan(Plane plane) {
   super();
@@ -12,10 +14,6 @@ public PlaneBewegungsplan(Plane plane) {
 @Override
 public void init() {
   final PlaneManoever manoever = plane.getType().getPlaneManoevers().getVorwaerts();
-//  final FacedHex ziel = new GeparsteHexRoute(plane.getHexOrt().getHex(), manoever.getSchrittString()).getZiel();
-//  setZielHex(ziel);
-  setZielHex(manoever.getZielGestartetVon(plane.getHexOrt().getHex()));
-//  final FacedHex hex = plane.getHexOrt().getHex().cloned();
-//  setZielHex(hex.getNextHex().getNextHex().getNextHex().getNextHex().getNextHex().getNextHex());
+  setRoute(manoever.getGeparsteRouteVon(plane.getHexOrt().getHex()));
 }
 }

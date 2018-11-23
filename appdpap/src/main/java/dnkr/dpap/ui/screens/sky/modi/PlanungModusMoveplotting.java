@@ -5,6 +5,7 @@ import dnkr.dpap.model.planes.PlaneNotFound;
 import dnkr.dpap.ui.screens.sky.Bewegungsfeld;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.libhex.hex.Hex;
+import dnkr.libhex.hexes.GeparsteHexRoute;
 
 public class PlanungModusMoveplotting extends PlanungModus {
 private final Bewegungsfeld bewegungsfeld;
@@ -62,7 +63,14 @@ private boolean isClickedSelected(Hex tappedHex) {
 
 private boolean isClickedZielHex(Hex tappedHex) {
   if (bewegungsfeld.getZielHexes().hasHexAt(tappedHex)) {
-    return true;
+    final GeparsteHexRoute routeFor = bewegungsfeld.getRouteFor(tappedHex);
+    if (routeFor != null) {
+      getPlaneSelection().getSelected().getBewegungsplan().setRoute(routeFor);
+      getSkyScreen().getActorManager().getLayers().wegplanLayer.doModelChanged();
+      doClear();
+      setModusTo(new PlanungModusSelectedOwn(getSkyScreen()));
+      return true;
+    }
   }
   return false;
 }
