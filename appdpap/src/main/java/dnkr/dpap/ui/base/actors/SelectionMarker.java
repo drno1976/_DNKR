@@ -11,7 +11,7 @@ import dnkr.dpap.ui.assets.DpapAssets;
 public class SelectionMarker extends HexGroupVisual {
 public SelectionMarker(ActorManager actorManager) {
   super(actorManager, new IdObject("selectionmarker"));
-  final Image glow1 = new CenteredImage(getTexture(DpapAssets.MARKERS_GLOW));
+  final Image glow1 = new CenteredImage(getTexture(DpapAssets.MARKER_GLOW));
   addActor(glow1);
 //  glow1.addAction(Actions.forever(Actions.sequence(Actions.scaleBy(0.3f,0.3f,2),Actions.scaleBy(-0.3f,-0.3f))));
   glow1.addAction(Actions.forever(Actions.rotateBy(360, 6)));

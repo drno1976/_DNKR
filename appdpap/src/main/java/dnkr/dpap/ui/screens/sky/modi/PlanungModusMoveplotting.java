@@ -30,7 +30,6 @@ public void tappedAt(Vector2 stagexy) {
   if (isClickedZielHex(tappedHex)) return;
   if (isClickedPlane(tappedHex)) return;
   
-//  if (isClickedPlane(tappedHex)) return;
 }
 
 private void doClickedCancel() {

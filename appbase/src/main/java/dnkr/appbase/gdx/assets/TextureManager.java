@@ -87,6 +87,10 @@ public TextureRegion getTexture(String name) {
     final Texture direkt = loadDirekt(name);
     if (direkt!=null)
       return new TextureRegion(direkt);
+    else {
+      System.err.println("Texture not found per direkt: " + name);
+    }
+    
   }
   return texture;
 }

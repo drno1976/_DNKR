@@ -5,7 +5,8 @@ import dnkr.appbase.gdx.actors.Layer;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import dnkr.dpap.model.planes.Plane;
-import static dnkr.dpap.ui.assets.DpapAssets.ENDPUNKT_RICHTUNG_HUD;
+import dnkr.dpap.ui.assets.DpapAssets;
+import static dnkr.dpap.ui.assets.DpapAssets.MARKER_ENDPUNKTRICHTUNG;
 import dnkr.dpap.ui.base.actors.FacedHexCenteredImage;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hexes.GeparsteHexRoute;
@@ -26,11 +27,13 @@ public void doModelChanged() {
 private void createWegmarkerFor(GeparsteHexRoute geparsteHexRoute) {
   FacedHex start = geparsteHexRoute.getStart();
   for (FacedHex facedHex : geparsteHexRoute) {
+    this.addActor(new VektorImage(getTexture(DpapAssets.MARKER_WEG), start, facedHex));
+    start = facedHex;
   }
 }
 
 private void createZielmarkerAt(FacedHex hex) {
-  final CenteredImage marker = new FacedHexCenteredImage(getTexture(ENDPUNKT_RICHTUNG_HUD),hex);
+  final CenteredImage marker = new FacedHexCenteredImage(getTexture(MARKER_ENDPUNKTRICHTUNG), hex);
   this.addActor(marker);
 }
 

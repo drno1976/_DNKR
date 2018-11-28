@@ -5,7 +5,7 @@ import dnkr.appbase.gdx.actors.Layer;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import dnkr.dpap.ui.assets.DpapAssets;
-import static dnkr.dpap.ui.assets.DpapAssets.ENDPUNKT_RICHTUNG_HUD;
+import static dnkr.dpap.ui.assets.DpapAssets.MARKER_ENDPUNKTRICHTUNG;
 import dnkr.dpap.ui.base.actors.FacedHexCenteredImage;
 import dnkr.dpap.ui.base.actors.HexCenteredImage;
 import dnkr.libhex.hex.FacedHex;
@@ -29,7 +29,7 @@ public void doModelChanged() {
     createFeldmarkerAt(hex);
   }
   for (FacedHex zielHex : bewegungsfeld.getZielHexes()) {
-    this.addActor(new FacedHexCenteredImage(getTexture(ENDPUNKT_RICHTUNG_HUD), zielHex));
+    this.addActor(new FacedHexCenteredImage(getTexture(MARKER_ENDPUNKTRICHTUNG), zielHex));
   }
 }
 

@@ -1,5 +1,5 @@
 package dnkr.libhex.hex;
-class Winkel {
+public class Winkel {
 public static int getWinkelDegreesFor(Hex von, Hex zu) {
   final int feldkantey = 64;
   final int versatzy = 32;
@@ -16,7 +16,11 @@ public static int getWinkelDegreesFor(Hex von, Hex zu) {
   return degrees;
 }
 
-
+/*
+import static dnkr.libhex.hex.HexKonstanten.VERSATZX;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZY;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZYhalb;
+ */
 //public static int getWinkelDegreesFor(FacedHex von, FacedHex zu) {
 //  final int feldkantey = 64;
 //  final int versatzy = 32;
