@@ -2,28 +2,16 @@ package dnkr.dpap.ui.base.actors;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import dnkr.appbase.gdx.actors.CenteredImage;
 import dnkr.libhex.hex.Hex;
-import static dnkr.libhex.hex.HexKonstanten.VERSATZX;
-import static dnkr.libhex.hex.HexKonstanten.VERSATZY;
-import static dnkr.libhex.hex.HexKonstanten.VERSATZYhalb;
 
 public class HexCenteredImage extends CenteredImage {
 public HexCenteredImage(TextureRegion region, Hex hex) {
   super(region);
-//  setPosition(-getWidth() / 2, -getHeight() / 2);
-  if (hex.isOdd()) {
-    moveBy(hex.x * VERSATZX, hex.y * VERSATZY + VERSATZYhalb);
-  } else {
-    moveBy(hex.x * VERSATZX, hex.y * VERSATZY);
-  }
+  moveBy(hex.getPixelX(), hex.getPixelY());
 }
 
 public void setPositionWithHex(Hex hex) {
   setPosition(-getWidth() / 2, -getHeight() / 2);
-  if (hex.isOdd()) {
-    moveBy(hex.x * VERSATZX, hex.y * VERSATZY + VERSATZYhalb);
-  } else {
-    moveBy(hex.x * VERSATZX, hex.y * VERSATZY);
-  }
+  moveBy(hex.getPixelX(), hex.getPixelY());
 }
 
 public void setRotationForFacing(byte facing) {

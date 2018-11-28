@@ -1,4 +1,8 @@
 package dnkr.libhex.hex;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZX;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZY;
+import static dnkr.libhex.hex.HexKonstanten.VERSATZYhalb;
+
 public class Hex {
 public int x, y;
 
@@ -63,20 +67,10 @@ public int distanceTo(int hexx, int hexy) {
 }
 
 public int getWinkelDegreesZu(Hex zu) {
-  final int feldkantey = 64;
-  final int versatzy = 32;
-  final int versatzx = 56;
-  final int ax = x * versatzx;
-  final int ay = y * feldkantey + (x & 1) * versatzy;
-  final int by = zu.y * feldkantey + (zu.x & 1) * versatzy;
-  final int bx = zu.x * versatzx;
-  double inRads = Math.atan2(by - ay, bx - ax);
+  double inRads = Math.atan2(zu.getPixelY() - getPixelY(), zu.getPixelX() - getPixelX());
   int degrees = (int) Math.round(Math.toDegrees(inRads));
-//  degrees += 90; //y nach unten
-  degrees += 30; //y nach unten
-  if (degrees < 0) degrees += 360;
+  degrees -= 90;
   return degrees;
-//  return Winkel.getWinkelDegreesFor(this, ziel);  //0 - 360
 }
 
 public String getSimplePosition() {
@@ -112,5 +106,11 @@ public Hex translated(int dx, int dy) {
   return cloned().translate(dx,dy);
 }
 
+public int getPixelY() {
+  return y * VERSATZY + (VERSATZYhalb * (x & 1));
+}
 
+public int getPixelX() {
+  return x * VERSATZX;
+}
 }

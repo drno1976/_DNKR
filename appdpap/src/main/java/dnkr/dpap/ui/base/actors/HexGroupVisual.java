@@ -4,9 +4,6 @@ import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.IdGroupVisual;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hex.Hex;
-import static dnkr.libhex.hex.HexKonstanten.VERSATZX;
-import static dnkr.libhex.hex.HexKonstanten.VERSATZY;
-import static dnkr.libhex.hex.HexKonstanten.VERSATZYhalb;
 
 public abstract class HexGroupVisual extends IdGroupVisual {
 public HexGroupVisual(ActorManager actorManager, IdObject idObject) {
@@ -14,11 +11,7 @@ public HexGroupVisual(ActorManager actorManager, IdObject idObject) {
 }
 
 public void setPositionWithHex(Hex hex) {
-  if (hex.isOdd()) {
-    setPosition(hex.x * VERSATZX, hex.y * VERSATZY + VERSATZYhalb);
-  } else {
-    setPosition(hex.x * VERSATZX, hex.y * VERSATZY);
-  }
+  setPosition(hex.getPixelX(), hex.getPixelY());
 }
 
 public void setRotationWithHex(FacedHex hex) {
