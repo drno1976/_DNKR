@@ -3,7 +3,6 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
 import dnkr.libhex.hex.FacedHex;
-import dnkr.libhex.hex.Hex;
 import static dnkr.libhex.hex.HexKonstanten.VERSATZX;
 import static dnkr.libhex.hex.HexKonstanten.VERSATZY;
 import static dnkr.libhex.hex.HexKonstanten.VERSATZYhalb;
@@ -37,27 +36,5 @@ private int getWinkelDegreesFor2(FacedHex von, FacedHex zu) {
   int degrees = (int) Math.round(Math.toDegrees(inRads));
   degrees -= 90;
   return degrees; //TODO Shrapnel Skies
-  /*
-    if (hex.isOdd()) {
-    moveBy(hex.x * VERSATZX, hex.y * VERSATZY + VERSATZYhalb);
-  } else {
-    moveBy(hex.x * VERSATZX, hex.y * VERSATZY);
-  }
-   */
-}
-
-public int getWinkelDegreesFor(Hex von, Hex zu) {
-  final int feldkantey = 64;
-  final int ax = von.x * VERSATZX;
-  final int ay = von.y * feldkantey + (von.x & 1) * VERSATZY;
-  final int by = zu.y * feldkantey + (zu.x & 1) * VERSATZY;
-  final int bx = zu.x * VERSATZX;
-  double inRads = Math.atan2(by - ay, bx - ax);
-  int degrees = (int) Math.round(Math.toDegrees(inRads));
-  degrees -= 90;
-////  degrees += 90; //y nach unten
-//  degrees += 30; //y nach unten
-//  if (degrees < 0) degrees += 360;
-  return degrees;
 }
 }
