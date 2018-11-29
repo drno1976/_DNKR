@@ -30,6 +30,10 @@ public void fillStage() {
 public GameData getGameData() {
   return bttScreen.getGameData();
 }
+
+@Override
+public void doModelChanged() {
+}
 //public PfadSchritteGroup getPfadSchritteGroup() {
 //  return pfadSchritteGroup;
 //}

@@ -49,6 +49,7 @@ dependencies {
     natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
     natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
     implementation 'org.jetbrains:annotations:15.0'
+    implementation project(path: ':libhex')
 }
 
 task copyAndroidNatives() {

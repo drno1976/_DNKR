@@ -16,6 +16,9 @@ public TestGameData() {
 private void createPlanes() {
   planes.create("Kraut.1").as(PlaneTypes.VALKYR).at(5, 5, FacedHex.N);
   planes.create("Kraut.2").as(PlaneTypes.KYRASSIER).at(7, 5, FacedHex.N);
+  planes.create("Raptor.1").as(PlaneTypes.HORNET).at(5, 25, FacedHex.S);
+  planes.create("Raptor.2").as(PlaneTypes.WASP).at(7, 25, FacedHex.S);
+  
 }
 
 private void createPlanesViele() {

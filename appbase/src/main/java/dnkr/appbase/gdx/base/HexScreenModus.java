@@ -1,7 +1,5 @@
-package dnkr.dpap.ui.base;
+package dnkr.appbase.gdx.base;
 import com.badlogic.gdx.math.Vector2;
-import dnkr.appbase.gdx.base.ModusStageScreen;
-import dnkr.appbase.gdx.base.StageScreenModus;
 import dnkr.libhex.hex.Hex;
 import dnkr.libhex.hex.HexFromStageXY;
 

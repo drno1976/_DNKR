@@ -1,13 +1,13 @@
 package dnkr.dpap.ui.screens.sky;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.CenteredImage;
+import dnkr.appbase.gdx.actors.FacedHexCenteredImage;
 import dnkr.appbase.gdx.actors.Layer;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import dnkr.dpap.model.planes.Plane;
 import dnkr.dpap.ui.assets.DpapAssets;
 import static dnkr.dpap.ui.assets.DpapAssets.MARKER_ENDPUNKTRICHTUNG;
-import dnkr.dpap.ui.base.actors.FacedHexCenteredImage;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hexes.GeparsteHexRoute;
 

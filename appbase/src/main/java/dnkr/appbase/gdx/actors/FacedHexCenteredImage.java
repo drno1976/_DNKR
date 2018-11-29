@@ -1,4 +1,4 @@
-package dnkr.dpap.ui.base.actors;
+package dnkr.appbase.gdx.actors;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import dnkr.libhex.hex.FacedHex;
 

@@ -1,6 +1,5 @@
-package dnkr.dpap.ui.base.actors;
+package dnkr.appbase.gdx.actors;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import dnkr.appbase.gdx.actors.CenteredImage;
 import dnkr.libhex.hex.Hex;
 
 public class HexCenteredImage extends CenteredImage {

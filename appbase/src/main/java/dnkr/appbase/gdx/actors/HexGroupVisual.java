@@ -1,7 +1,5 @@
-package dnkr.dpap.ui.base.actors;
+package dnkr.appbase.gdx.actors;
 import dnkr.appbase.base.IdObject;
-import dnkr.appbase.gdx.actors.ActorManager;
-import dnkr.appbase.gdx.actors.IdGroupVisual;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hex.Hex;
 

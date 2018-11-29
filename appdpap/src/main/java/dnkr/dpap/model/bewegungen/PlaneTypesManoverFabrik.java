@@ -1,8 +1,10 @@
 package dnkr.dpap.model.bewegungen;
 import dnkr.dpap.model.planes.PlaneType;
 import dnkr.dpap.model.planes.PlaneTypes;
+import static dnkr.dpap.model.planes.PlaneTypes.HORNET;
 import static dnkr.dpap.model.planes.PlaneTypes.KYRASSIER;
 import static dnkr.dpap.model.planes.PlaneTypes.VALKYR;
+import static dnkr.dpap.model.planes.PlaneTypes.WASP;
 
 public class PlaneTypesManoverFabrik {
 private final PlaneTypes types;
@@ -20,6 +22,10 @@ public PlaneTypesManoverFabrik(PlaneTypes types) {
   addMirrored("r1", new PlaneManoever("vvrlv"));
   addMirrored("r2", new PlaneManoever("vvrv"));
   addMirrored("r3", new PlaneManoever("vrv"));
+  setType(HORNET);
+  add("vw", 6);
+  setType(WASP);
+  add("vw", 6);
   //"vvvvv,vvlrvv,vvvlvv,vvlvv,vvrlvv,vvvrvv,vvrvv");
 }
 
