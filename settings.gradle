@@ -1,1 +1,1 @@
-include ':appvkngs', ':appbase', ':appdpap', ':libhex'
+include ':appvkngs', ':appbase', ':appdpap', ':libhex', ':libbase'

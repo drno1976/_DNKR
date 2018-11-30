@@ -1,4 +1,4 @@
-package dnkr.appbase.base;
+package dnkr.libbase;
 interface HasId {
 String getId();
 }

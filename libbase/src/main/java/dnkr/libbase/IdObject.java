@@ -1,4 +1,4 @@
-package dnkr.appbase.base;
+package dnkr.libbase;
 public class IdObject implements HasId {
 private final String id;
 
