@@ -1,5 +1,4 @@
 package dnkr.dpap.ui.base.actions;
-import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
@@ -21,9 +20,6 @@ public Action getActions() {
   final SequenceAction sequence = Actions.sequence();
   FacedHex start = plane.getHexOrt().getHex();
   float lastfacingDegrees = start.getFacingDegrees();
-//  final FacedHex zielHex =           plane.getBewegungsplan().getZielHex();
-//  final Vector2FromHex pos = getPosFor(zielHex);
-//  sequence.addAction(Actions.moveTo(pos.x, pos.y, movingDuration ));
   final GeparsteHexRoute hexRoute = plane.getBewegungsplan().getGeparsteHexRoute();
   final float duration = movingDuration / hexRoute.size();
   for (int schritt = 0; schritt < hexRoute.size(); schritt++) {
@@ -32,7 +28,7 @@ public Action getActions() {
       lastfacingDegrees = hex.getFacingDegrees();
       final Vector2FromHex pos = getPosFor(hex);
       sequence.addAction(Actions.sequence(
-              Actions.rotateTo(hex.getFacingDegrees(), duration, Interpolation.pow5In),
+              Actions.rotateTo(hex.getFacingDegrees()),
               Actions.moveTo(pos.x, pos.y, duration)
       ));
     } else {

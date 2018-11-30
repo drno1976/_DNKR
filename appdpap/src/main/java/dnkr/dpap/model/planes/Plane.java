@@ -1,9 +1,9 @@
 package dnkr.dpap.model.planes;
-import dnkr.appbase.base.IdObject;
 import dnkr.dpap.model.bewegungen.Bewegungsplan;
 import dnkr.dpap.model.bewegungen.Bewegungsplaner;
 import dnkr.dpap.model.bewegungen.PlaneBewegungsplan;
 import dnkr.dpap.model.bewegungen.PlaneRouten;
+import dnkr.libbase.IdObject;
 import dnkr.libhex.HasHexOrt;
 import dnkr.libhex.HexOrt;
 

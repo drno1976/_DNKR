@@ -1,6 +1,8 @@
-package dnkr.dpap.ui.screens.sky;
+package dnkr.dpap.logik;
 import android.view.View;
 import dnkr.dpap.logik.turns.TurnResolver;
+import dnkr.dpap.ui.screens.sky.SkyScreen;
+import dnkr.dpap.ui.screens.sky.SkyScreenClickedFab;
 import dnkr.dpap.ui.screens.sky.modi.PlanungModusUnselected;
 
 public class DoneMovingClickedFab extends SkyScreenClickedFab {

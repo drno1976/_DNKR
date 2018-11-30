@@ -2,10 +2,10 @@ package dnkr.dpap.ui.screens.sky;
 import android.view.View;
 import dnkr.appbase.buttons.ButtonUi;
 
-abstract class SkyScreenClickedFab implements View.OnClickListener {
+public abstract class SkyScreenClickedFab implements View.OnClickListener {
 protected final SkyScreen skyScreen;
 
-SkyScreenClickedFab(SkyScreen skyScreen) {
+public SkyScreenClickedFab(SkyScreen skyScreen) {
   this.skyScreen = skyScreen;
 }
 

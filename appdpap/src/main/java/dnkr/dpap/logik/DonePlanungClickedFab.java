@@ -1,5 +1,7 @@
-package dnkr.dpap.ui.screens.sky;
+package dnkr.dpap.logik;
 import android.view.View;
+import dnkr.dpap.ui.screens.sky.SkyScreen;
+import dnkr.dpap.ui.screens.sky.SkyScreenClickedFab;
 import dnkr.dpap.ui.screens.sky.modi.MovingModusReady;
 
 public class DonePlanungClickedFab extends SkyScreenClickedFab {

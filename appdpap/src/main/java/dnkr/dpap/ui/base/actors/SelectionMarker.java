@@ -1,13 +1,13 @@
 package dnkr.dpap.ui.base.actors;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import dnkr.appbase.base.IdObject;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.CenteredImage;
 import dnkr.appbase.gdx.actors.HexGroupVisual;
 import dnkr.dpap.data.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import dnkr.dpap.ui.assets.DpapAssets;
+import dnkr.libbase.IdObject;
 
 public class SelectionMarker extends HexGroupVisual {
 public SelectionMarker(ActorManager actorManager) {
