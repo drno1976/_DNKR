@@ -3,7 +3,7 @@ import com.badlogic.gdx.math.Vector2;
 import dnkr.libhex.hex.Hex;
 import dnkr.libhex.hex.HexFromStageXY;
 
-public class HexScreenModus extends StageScreenModus {
+public abstract class HexScreenModus extends StageScreenModus {
 public HexScreenModus(ModusStageScreen stageScreen) {
   super(stageScreen);
 }

@@ -42,6 +42,7 @@ public void dispose() {
 
 public void setModusTo(Modus modus) {
   modusStage.setModus(modus);
+  modus.begin();
   System.out.println("modus = " + modus.getClass().getSimpleName());
 }
 }

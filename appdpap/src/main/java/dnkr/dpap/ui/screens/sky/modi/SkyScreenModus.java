@@ -9,7 +9,7 @@ import dnkr.dpap.model.planes.Plane;
 import dnkr.dpap.ui.assets.DpapFabFabrik;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 
-class SkyScreenModus extends HexScreenModus {
+abstract class SkyScreenModus extends HexScreenModus {
 private final SkyScreen skyScreen;
 
 public SkyScreenModus(SkyScreen skyScreen) {

@@ -2,10 +2,13 @@ package dnkr.appbase.gdx.base;
 import android.util.Log;
 import com.badlogic.gdx.math.Vector2;
 
-public class Modus implements StageInputListener {
+public abstract class Modus implements StageInputListener {
 
 protected Modus() {
 }
+
+abstract public void begin();
+
 
 @Override
 public void tappedAt(Vector2 stageCoordinates) {

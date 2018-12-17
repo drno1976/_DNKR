@@ -1,7 +1,7 @@
 package dnkr.appbase.gdx.base;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public class StageScreenModus extends Modus {
+public abstract class StageScreenModus extends Modus {
 private final ModusStageScreen screen;
 
 public StageScreenModus(ModusStageScreen stageScreen) {

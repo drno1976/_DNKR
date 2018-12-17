@@ -5,7 +5,7 @@ public class ModusStage extends com.badlogic.gdx.scenes.scene2d.Stage {
 private Modus modus;
 
 public ModusStage() {
-  modus = new Modus();
+  modus = new SimpleModus();
   //addActor(new FpsLabel());
 }
 

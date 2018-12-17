@@ -7,14 +7,19 @@ import dnkr.libhex.hex.Hex;
 public class MovingModusFinished extends MovingModus {
 public MovingModusFinished(SkyScreen skyScreen) {
   super(skyScreen);
+}
+
+@Override
+public void begin() {
   getActionButtonUi().addButton(getFabFabrik().getReplayFab(v -> doClickedReplay()));
-  skyScreen.getActorManager().getSelectionMarker().doDeactivate();
-  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new DoneMovingClickedFab(skyScreen)));
+  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new DoneMovingClickedFab(getSkyScreen())));
+  getSkyScreen().getActorManager().getSelectionMarker().doDeactivate();
 }
 
 private void doClickedReplay() {
   System.out.println("Clicked replay");
   getActionButtonUi().removeButton("Replay");
+  getMenuButtonUi().removeButton("DoneAll");
   getSkyScreen().getActorManager().resetMoving();
   setModusTo(new MovingModusReady(getSkyScreen()));
 }
