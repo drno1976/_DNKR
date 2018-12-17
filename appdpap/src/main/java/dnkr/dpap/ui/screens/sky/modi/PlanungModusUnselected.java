@@ -11,11 +11,7 @@ import dnkr.libhex.hex.Hex;
 public class PlanungModusUnselected extends PlanungModus {
 public PlanungModusUnselected(SkyScreen skyScreen) {
   super(skyScreen);
-  getMenuButtonUi().removeAll();
-  getMenuButtonUi().addButton(getFabFabrik().getMenuFab(new ClickedFabMenu(skyScreen)));
-  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new DonePlanungClickedFab(skyScreen)));
-  getMenuButtonUi().addButton(getFabFabrik().getNextFab(v -> doClickedNext()));
-  skyScreen.getActorManager().getSelectionMarker().doDeactivate();
+
 }
 
 private void doClickedNext() {
@@ -24,6 +20,15 @@ private void doClickedNext() {
   if (list.isEmpty()) return;
   getPlaneSelection().setSelected(list.iterator().next());
   setModusTo(getModusFor(getPlaneSelection().getSelected()));
+}
+
+@Override
+public void begin() {
+  getMenuButtonUi().removeAll();
+  getMenuButtonUi().addButton(getFabFabrik().getMenuFab(new ClickedFabMenu(getSkyScreen())));
+  getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new DonePlanungClickedFab(getSkyScreen())));
+  getMenuButtonUi().addButton(getFabFabrik().getNextFab(v -> doClickedNext()));
+  getSkyScreen().getActorManager().getSelectionMarker().doDeactivate();
 }
 
 @Override

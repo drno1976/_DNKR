@@ -36,9 +36,7 @@ public void show() {
 }
 
 @NonNull
-protected TiledStageScreenModus chooseModusAtShow() {
-  return new TiledStageScreenModus(this);
-}
+protected abstract TiledStageScreenModus chooseModusAtShow();
 
 @Override
 public void render(float delta) {

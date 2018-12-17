@@ -3,7 +3,7 @@ import android.support.annotation.NonNull;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import dnkr.appbase.gdx.base.Modus;
 
-public class TiledStageScreenModus extends Modus {
+public abstract class TiledStageScreenModus extends Modus {
 @NonNull
 private final TiledStageScreen screen;
 

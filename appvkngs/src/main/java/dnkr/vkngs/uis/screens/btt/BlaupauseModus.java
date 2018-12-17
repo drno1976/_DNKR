@@ -8,7 +8,6 @@ private final BttScreen blaupause;
 public BlaupauseModus(BttScreen blaupause) {
   super(blaupause);
   this.blaupause = blaupause;
-  
 }
 
 public BttScreen getBlaupause() {
@@ -17,5 +16,9 @@ public BttScreen getBlaupause() {
 
 public UiState getUiState() {
   return getBlaupause().getGameData().getUiState();
+}
+
+@Override
+public void begin() {
 }
 }
