@@ -4,7 +4,7 @@ import dnkr.appbase.gdx.actors.CenteredImage;
 import dnkr.appbase.gdx.actors.FacedHexCenteredImage;
 import dnkr.appbase.gdx.actors.HexCenteredImage;
 import dnkr.appbase.gdx.actors.Layer;
-import dnkr.dpap.data.Games;
+import dnkr.dpap.data.games.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import dnkr.dpap.ui.assets.DpapAssets;
 import static dnkr.dpap.ui.assets.DpapAssets.MARKER_ENDPUNKTRICHTUNG;

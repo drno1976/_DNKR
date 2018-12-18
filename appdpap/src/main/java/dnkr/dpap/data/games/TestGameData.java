@@ -1,4 +1,4 @@
-package dnkr.dpap.data;
+package dnkr.dpap.data.games;
 import dnkr.dpap.model.planes.Plane;
 import dnkr.dpap.model.planes.PlaneTypes;
 import dnkr.libhex.hex.FacedHex;

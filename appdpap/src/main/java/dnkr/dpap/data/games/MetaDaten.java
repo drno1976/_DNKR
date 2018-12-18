@@ -1,4 +1,4 @@
-package dnkr.dpap.data;
+package dnkr.dpap.data.games;
 class MetaDaten {
 private int idCounter=1000;
 

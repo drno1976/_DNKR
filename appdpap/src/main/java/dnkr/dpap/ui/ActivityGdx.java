@@ -3,7 +3,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import dnkr.appbase.activitys.FullscreenApplication;
-import dnkr.dpap.data.Games;
+import dnkr.dpap.data.games.Games;
 
 public class ActivityGdx extends FullscreenApplication {
 @Override

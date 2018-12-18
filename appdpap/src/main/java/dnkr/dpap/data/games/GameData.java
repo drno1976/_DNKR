@@ -1,4 +1,4 @@
-package dnkr.dpap.data;
+package dnkr.dpap.data.games;
 import dnkr.dpap.data.uistates.UiState;
 import dnkr.dpap.model.planes.PlaneTypes;
 

@@ -4,7 +4,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.CenteredImage;
 import dnkr.appbase.gdx.actors.HexGroupVisual;
-import dnkr.dpap.data.Games;
+import dnkr.dpap.data.games.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import dnkr.dpap.ui.assets.DpapAssets;
 import dnkr.libbase.IdObject;

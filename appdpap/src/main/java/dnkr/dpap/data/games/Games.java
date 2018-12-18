@@ -1,4 +1,4 @@
-package dnkr.dpap.data;
+package dnkr.dpap.data.games;
 import dnkr.appbase.activitys.FullscreenApplication;
 
 public class Games {

@@ -1,5 +1,5 @@
 package dnkr.dpap.logik.turns;
-import dnkr.dpap.data.Games;
+import dnkr.dpap.data.games.Games;
 import dnkr.dpap.model.planes.Plane;
 import dnkr.libhex.hex.FacedHex;
 

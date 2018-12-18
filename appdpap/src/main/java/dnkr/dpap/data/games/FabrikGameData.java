@@ -1,4 +1,4 @@
-package dnkr.dpap.data;
+package dnkr.dpap.data.games;
 class FabrikGameData extends GameData {
 protected final PlaneFabrik planes;
 
