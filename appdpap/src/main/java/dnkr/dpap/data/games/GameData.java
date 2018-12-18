@@ -5,6 +5,11 @@ import dnkr.dpap.model.planes.PlaneTypes;
 public class GameData {
 private final UiState uiState;
 private final PlaneListen planeListen;
+
+public MetaDaten getMetaDaten() {
+  return metaDaten;
+}
+
 private final MetaDaten metaDaten;
 private final PlaneTypes planeTypes;
 

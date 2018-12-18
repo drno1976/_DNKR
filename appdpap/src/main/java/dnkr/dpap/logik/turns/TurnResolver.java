@@ -1,6 +1,5 @@
 package dnkr.dpap.logik.turns;
-public class TurnResolver implements Resolver {
-
+public class TurnResolver extends AbstractResolver {
 
 public TurnResolver(){
 }
@@ -10,6 +9,7 @@ public void doResolve() {
 //  new ShootingResolver().doResolve();
   new MovementResolver().doResolve();
 //  new SpielendeResolver().doResolve();
-//  gameData.getTurnData().increaseTurnNumber();
+  getData().getMetaDaten().increaseTurnNumber();
+
 }
 }

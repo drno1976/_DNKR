@@ -2,17 +2,16 @@ package dnkr.dpap.data.games;
 import dnkr.dpap.model.planes.Plane;
 import dnkr.dpap.model.planes.PlaneType;
 
-class PlaneFabrik {
-private final GameData data;
+class PlaneFabrik extends DataFabrik {
 private Plane plane;
 
 public PlaneFabrik(GameData data) {
-  this.data = data;
+  super(data);
 }
 
 public PlaneFabrik create(String id) {
   plane = new Plane(id);
-  data.getPlaneListen().addNewPlane(plane);
+  getData().getPlaneListen().addNewPlane(plane);
   return this;
 }
 
@@ -22,7 +21,7 @@ public PlaneFabrik as(String typeID) {
 }
 
 private PlaneType getPlaneTypeById(String typeID) {
-  return data.getPlaneTypes().getById(typeID);
+  return getData().getPlaneTypes().getById(typeID);
 }
 
 public void at(int x, int y, byte facing) {

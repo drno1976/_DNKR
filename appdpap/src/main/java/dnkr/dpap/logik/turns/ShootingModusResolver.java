@@ -1,9 +1,9 @@
 package dnkr.dpap.logik.turns;
 import dnkr.dpap.data.games.Games;
+import dnkr.dpap.data.games.TorpedoFabrik;
 import dnkr.dpap.model.planes.Plane;
-import dnkr.libhex.hex.FacedHex;
 
-public class ShootingModusResolver implements Resolver {
+public class ShootingModusResolver extends AbstractResolver {
 @Override
 public void doResolve() {
 //  ermittleKollisionen();
@@ -12,11 +12,14 @@ public void doResolve() {
 }
 
 private void starteTorpedoes() {
-  for (Plane plane : Games.getGameData().getPlaneListen().getPlanesOnMap().asList()) {
-    final FacedHex zielHex = plane.getBewegungsplan().getZielHex();
-    plane.getHexOrt().getHex().setLike(zielHex);
+  for (Plane plane : getData().getPlaneListen().getPlanesOnMap().asList()) {
+    if (plane.getId().equals("Kraut.2")) {
+      final TorpedoFabrik tf = new TorpedoFabrik(Games.getGameData());
+      tf.createFrom(plane);
+    }
+//    final FacedHex zielHex = plane.getBewegungsplan().getZielHex();
+//    plane.getHexOrt().getHex().setLike(zielHex);
     //    plane.getBewegungsplan().getSchweif().doCreateFrom(plane.getBewegungsplan().getHexweg());
-    plane.getBewegungsplan().init();
   }
 }
 }
