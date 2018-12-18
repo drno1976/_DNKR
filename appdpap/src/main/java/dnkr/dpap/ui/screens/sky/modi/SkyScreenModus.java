@@ -5,7 +5,7 @@ import dnkr.appbase.gdx.base.Modus;
 import dnkr.dpap.data.games.Games;
 import dnkr.dpap.data.games.PlaneListen;
 import dnkr.dpap.data.uistates.UiState;
-import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.assets.DpapFabFabrik;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 

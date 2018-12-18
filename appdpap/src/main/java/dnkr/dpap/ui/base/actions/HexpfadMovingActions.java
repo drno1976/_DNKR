@@ -3,7 +3,7 @@ import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
-import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.UiPreferences;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hexes.GeparsteHexRoute;

@@ -1,6 +1,6 @@
 package dnkr.dpap.data.games;
-import dnkr.dpap.model.planes.Plane;
-import dnkr.dpap.model.planes.PlaneMap;
+import dnkr.dpap.model.tokens.planes.Plane;
+import dnkr.dpap.model.tokens.planes.PlaneMap;
 
 public class PlaneListen {
 private final PlaneMap planesOnMap, planesAll;

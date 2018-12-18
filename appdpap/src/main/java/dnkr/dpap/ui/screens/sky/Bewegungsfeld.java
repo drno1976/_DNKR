@@ -1,7 +1,7 @@
 package dnkr.dpap.ui.screens.sky;
 import java.util.ArrayList;
 import java.util.HashMap;
-import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hex.Hex;
 import dnkr.libhex.hexes.GeparsteHexRoute;

@@ -1,10 +1,10 @@
 package dnkr.dpap.model.bewegungen;
-import dnkr.dpap.model.planes.PlaneType;
-import dnkr.dpap.model.planes.PlaneTypes;
-import static dnkr.dpap.model.planes.PlaneTypes.HORNET;
-import static dnkr.dpap.model.planes.PlaneTypes.KYRASSIER;
-import static dnkr.dpap.model.planes.PlaneTypes.VALKYR;
-import static dnkr.dpap.model.planes.PlaneTypes.WASP;
+import dnkr.dpap.model.tokens.planes.PlaneType;
+import dnkr.dpap.model.tokens.planes.PlaneTypes;
+import static dnkr.dpap.model.tokens.planes.PlaneTypes.HORNET;
+import static dnkr.dpap.model.tokens.planes.PlaneTypes.KYRASSIER;
+import static dnkr.dpap.model.tokens.planes.PlaneTypes.VALKYR;
+import static dnkr.dpap.model.tokens.planes.PlaneTypes.WASP;
 
 public class PlaneTypesManoverFabrik {
 private final PlaneTypes types;

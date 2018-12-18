@@ -1,26 +1,17 @@
-package dnkr.dpap.model.planes;
-import dnkr.dpap.model.bewegungen.Bewegungsplan;
+package dnkr.dpap.model.tokens.planes;
+import dnkr.appbase.base.Hextoken;
 import dnkr.dpap.model.bewegungen.Bewegungsplaner;
 import dnkr.dpap.model.bewegungen.PlaneBewegungsplan;
 import dnkr.dpap.model.bewegungen.PlaneRouten;
-import dnkr.libbase.IdObject;
-import dnkr.libhex.HasHexOrt;
-import dnkr.libhex.HexOrt;
+import dnkr.libhex.routen.Bewegungsplan;
 
-public class Plane extends IdObject implements HasHexOrt {
-private final HexOrt hexOrt;
+public class Plane extends Hextoken {
 private PlaneType type;
 private final Bewegungsplan bewegungsplan;
 
 public Plane(String id) {
   super(id);
-  hexOrt = new HexOrt();
   bewegungsplan = new PlaneBewegungsplan(this);
-}
-
-@Override
-public HexOrt getHexOrt() {
-  return hexOrt;
 }
 
 public void setType(PlaneType type) {

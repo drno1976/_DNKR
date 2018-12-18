@@ -1,7 +1,6 @@
 package dnkr.dpap.logik.turns;
-import dnkr.dpap.data.games.Games;
 import dnkr.dpap.data.games.TorpedoFabrik;
-import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.tokens.planes.Plane;
 
 public class ShootingModusResolver extends AbstractResolver {
 @Override
@@ -14,7 +13,7 @@ public void doResolve() {
 private void starteTorpedoes() {
   for (Plane plane : getData().getPlaneListen().getPlanesOnMap().asList()) {
     if (plane.getId().equals("Kraut.2")) {
-      final TorpedoFabrik tf = new TorpedoFabrik(Games.getGameData());
+      final TorpedoFabrik tf = new TorpedoFabrik(getData());
       tf.createFrom(plane);
     }
 //    final FacedHex zielHex = plane.getBewegungsplan().getZielHex();

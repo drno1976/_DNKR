@@ -1,8 +1,8 @@
-package dnkr.dpap.model.bewegungen;
+package dnkr.libhex.routen;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-class RoutenAsSchrittStrings extends ArrayList<String> {
+public class RoutenAsSchrittStrings extends ArrayList<String> {
 public RoutenAsSchrittStrings() {
 //  add("vvvvvv");
 }

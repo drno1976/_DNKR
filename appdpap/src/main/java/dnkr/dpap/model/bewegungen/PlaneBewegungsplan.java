@@ -1,6 +1,7 @@
 package dnkr.dpap.model.bewegungen;
-import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.libhex.hexes.GeparsteHexRoute;
+import dnkr.libhex.routen.Bewegungsplan;
 
 public class PlaneBewegungsplan extends Bewegungsplan {
 private final Plane plane;

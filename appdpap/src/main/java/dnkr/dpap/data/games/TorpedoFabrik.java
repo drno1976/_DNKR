@@ -1,6 +1,6 @@
 package dnkr.dpap.data.games;
-import dnkr.dpap.model.planes.Plane;
-import dnkr.dpap.model.planes.Torpedo;
+import dnkr.dpap.model.tokens.Torpedo;
+import dnkr.dpap.model.tokens.planes.Plane;
 
 public class TorpedoFabrik extends DataFabrik {
 public TorpedoFabrik(GameData data) {
@@ -10,6 +10,7 @@ public TorpedoFabrik(GameData data) {
 public void createFrom(Plane plane) {
   final Torpedo torpedo = new Torpedo(calculateId(plane));
   torpedo.getHexOrt().getHex().setLike(plane.getHexOrt().getHex());
+  getData().getHextokenMap().put(torpedo);
 }
 
 private String calculateId(Plane plane) {

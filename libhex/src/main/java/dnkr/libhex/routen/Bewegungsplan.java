@@ -1,4 +1,4 @@
-package dnkr.dpap.model.bewegungen;
+package dnkr.libhex.routen;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hexes.GeparsteHexRoute;
 

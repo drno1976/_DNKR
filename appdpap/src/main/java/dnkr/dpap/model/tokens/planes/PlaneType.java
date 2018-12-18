@@ -1,4 +1,4 @@
-package dnkr.dpap.model.planes;
+package dnkr.dpap.model.tokens.planes;
 import dnkr.dpap.model.bewegungen.PlaneManoevers;
 import dnkr.libbase.IdObject;
 

@@ -1,7 +1,7 @@
 package dnkr.dpap.ui.screens.sky.modi;
 import com.badlogic.gdx.math.Vector2;
-import dnkr.dpap.model.planes.Plane;
-import dnkr.dpap.model.planes.PlaneNotFound;
+import dnkr.dpap.model.tokens.planes.Plane;
+import dnkr.dpap.model.tokens.planes.PlaneNotFound;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.libhex.hex.Hex;
 

@@ -1,5 +1,5 @@
 package dnkr.dpap.logik.turns;
-import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.libhex.hex.FacedHex;
 
 class MovementResolver extends AbstractResolver {

@@ -6,8 +6,8 @@ import dnkr.dpap.data.games.Games;
 import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.base.actors.PlaneVisual;
 
-class PlaneLayer extends Layer {
-public PlaneLayer(ActorManager actorManager) {
+class HextokenLayer extends Layer {
+public HextokenLayer(ActorManager actorManager) {
   super(actorManager);
   doModelChanged();
 }

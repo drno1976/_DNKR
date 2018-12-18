@@ -1,5 +1,5 @@
 package dnkr.dpap.ui.assets;
-import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.tokens.planes.Plane;
 
 public class PlaneTextureIds {
 public static final PlaneTextureIds ourInstance = new PlaneTextureIds();

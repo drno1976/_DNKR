@@ -1,4 +1,4 @@
-package dnkr.dpap.model.planes;
+package dnkr.dpap.model.tokens.planes;
 import java.util.HashMap;
 import dnkr.dpap.model.bewegungen.PlaneTypesManoverFabrik;
 

@@ -1,6 +1,6 @@
 package dnkr.dpap.data.games;
-import dnkr.dpap.model.planes.Plane;
-import dnkr.dpap.model.planes.PlaneType;
+import dnkr.dpap.model.tokens.planes.Plane;
+import dnkr.dpap.model.tokens.planes.PlaneType;
 
 class PlaneFabrik extends DataFabrik {
 private Plane plane;

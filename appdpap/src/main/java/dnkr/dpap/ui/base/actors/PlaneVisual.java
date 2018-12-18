@@ -3,11 +3,11 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.CenteredImage;
 import dnkr.appbase.gdx.actors.HexGroupVisual;
-import dnkr.dpap.model.planes.Plane;
+import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.assets.PlaneTextureIds;
 import dnkr.dpap.ui.base.actions.HexpfadMovingActions;
 
-public class PlaneVisual extends HexGroupVisual {
+public class PlaneVisual extends HexGroupVisual implements MovingReplay {
 public PlaneVisual(ActorManager actorManager, Plane plane) {
   super(actorManager, plane);
   final Image main = new CenteredImage(getTexture(PlaneTextureIds.getIds().getIdFor(plane)));
@@ -16,6 +16,7 @@ public PlaneVisual(ActorManager actorManager, Plane plane) {
   setRotationWithHex(plane.getHexOrt().getHex());
 }
 
+@Override
 public void prepareMoving() {
   resetMoving();
   this.addAction(new HexpfadMovingActions(getPlane()).getActions());
@@ -25,6 +26,7 @@ private Plane getPlane() {
   return (Plane) getUserObject();
 }
 
+@Override
 public void resetMoving() {
   this.clearActions();
   setPositionWithHex(getPlane().getHexOrt().getHex());
