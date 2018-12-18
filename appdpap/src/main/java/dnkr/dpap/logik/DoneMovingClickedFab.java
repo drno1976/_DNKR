@@ -19,8 +19,8 @@ public void onClick(View v) {
   
   //check Spielende
   //verzweige gemäß resultat
-  skyScreen.getActorManager().doModelChanged();
+  getSkyScreen().getActorManager().doModelChanged();
   //ändere actors
-  skyScreen.setModusTo(new PlanungModusUnselected(skyScreen));
+  getSkyScreen().setModusTo(new PlanungModusUnselected(getSkyScreen()));
 }
 }

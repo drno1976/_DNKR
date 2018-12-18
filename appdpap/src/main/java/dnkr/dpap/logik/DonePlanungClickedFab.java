@@ -2,7 +2,7 @@ package dnkr.dpap.logik;
 import android.view.View;
 import dnkr.dpap.ui.screens.sky.SkyScreen;
 import dnkr.dpap.ui.screens.sky.SkyScreenClickedFab;
-import dnkr.dpap.ui.screens.sky.modi.MovingModusReady;
+import dnkr.dpap.ui.screens.sky.modi.ResolvingModus;
 
 public class DonePlanungClickedFab extends SkyScreenClickedFab {
 public DonePlanungClickedFab(SkyScreen skyScreen) {
@@ -14,10 +14,10 @@ public void onClick(View v) {
   System.out.println("Clicked DONEALL-Planung");
   getMenuButtonUi().removeButton("DoneAll");
   getMenuButtonUi().removeButton("Next");
-  skyScreen.getActorManager().getSelectionMarker().doDeactivate();
+  getSkyScreen().getActorManager().getSelectionMarker().doDeactivate();
   getLayers().wegplanLayer.removeChildrenFromStage();
   System.out.println("Change to resolve");
   getActionButtonUi().removeAll();
-  skyScreen.setModusTo(new MovingModusReady(skyScreen));
+  getSkyScreen().setModusTo(new ResolvingModus(getSkyScreen()));
 }
 }

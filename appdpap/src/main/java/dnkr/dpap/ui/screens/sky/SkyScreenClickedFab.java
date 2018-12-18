@@ -3,10 +3,14 @@ import android.view.View;
 import dnkr.appbase.buttons.ButtonUi;
 
 public abstract class SkyScreenClickedFab implements View.OnClickListener {
-protected final SkyScreen skyScreen;
+private final SkyScreen skyScreen;
 
 public SkyScreenClickedFab(SkyScreen skyScreen) {
   this.skyScreen = skyScreen;
+}
+
+public SkyScreen getSkyScreen() {
+  return skyScreen;
 }
 
 @Override
