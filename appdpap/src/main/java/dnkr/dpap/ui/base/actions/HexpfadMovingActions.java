@@ -3,7 +3,7 @@ import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
-import dnkr.dpap.model.tokens.planes.Plane;
+import dnkr.appbase.base.Hextoken;
 import dnkr.dpap.ui.UiPreferences;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hexes.GeparsteHexRoute;
@@ -11,8 +11,8 @@ import dnkr.libhex.hexes.GeparsteHexRoute;
 public class HexpfadMovingActions extends MovingModusActions {
 private final float movingDuration;
 
-public HexpfadMovingActions(Plane plane) {
-  super(plane);
+public HexpfadMovingActions(Hextoken hextoken) {
+  super(hextoken);
   movingDuration = UiPreferences.getPrefs().getMovingDuration();
 }
 
@@ -21,7 +21,7 @@ public Action getActions() {
   final SequenceAction sequence = Actions.sequence();
   FacedHex start = plane.getHexOrt().getHex();
   float lastfacingDegrees = start.getFacingDegrees();
-  final GeparsteHexRoute hexRoute = plane.getBewegungsplan().getGeparsteHexRoute();
+  final GeparsteHexRoute hexRoute = getBewegungsplan().getGeparsteHexRoute();
   final float duration = movingDuration / hexRoute.size();
   for (int schritt = 0; schritt < hexRoute.size(); schritt++) {
     final FacedHex zu = hexRoute.get(schritt);

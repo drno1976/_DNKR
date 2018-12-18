@@ -12,6 +12,6 @@ private PlaneTextureIds() {
 }
 
 public String getIdFor(Plane plane) {
-  return "pfeil.png";
+  return DpapAssets.GENERICTEXTURE_PNG;
 }
 }

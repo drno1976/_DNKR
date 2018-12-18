@@ -2,18 +2,16 @@ package dnkr.dpap.ui.base.actors;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.CenteredImage;
-import dnkr.appbase.gdx.actors.HexGroupVisual;
 import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.assets.PlaneTextureIds;
 import dnkr.dpap.ui.base.actions.HexpfadMovingActions;
 
-public class PlaneVisual extends HexGroupVisual implements MovingReplay {
+public class PlaneVisual extends HextokenVisual {
 public PlaneVisual(ActorManager actorManager, Plane plane) {
   super(actorManager, plane);
   final Image main = new CenteredImage(getTexture(PlaneTextureIds.getIds().getIdFor(plane)));
   addActor(main);
-  setPositionWithHex(plane.getHexOrt().getHex());
-  setRotationWithHex(plane.getHexOrt().getHex());
+//  resetMoving();
 }
 
 @Override

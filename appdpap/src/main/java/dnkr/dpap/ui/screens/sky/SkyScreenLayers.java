@@ -9,6 +9,6 @@ public SkyScreenLayers(SkyActorManager actorManager) {
   planeLayer = new PlaneLayer(actorManager);
   wegplanLayer = new WegplanLayer(actorManager);
   wegplanungLayer = new WegplanungLayer(actorManager);
-  hextokenLayer = new HextokenLayer(actorManager);
+  hextokenLayer = new ModelHextokenLayer(actorManager);
 }
 }

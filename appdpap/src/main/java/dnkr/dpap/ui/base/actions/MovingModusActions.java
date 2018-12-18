@@ -1,12 +1,13 @@
 package dnkr.dpap.ui.base.actions;
 import com.badlogic.gdx.scenes.scene2d.Action;
-import dnkr.dpap.model.tokens.planes.Plane;
+import dnkr.appbase.base.Hextoken;
 import dnkr.libhex.hex.Hex;
+import dnkr.libhex.routen.Bewegungsplan;
 
 public abstract class MovingModusActions {
-protected final Plane plane;
+final Hextoken plane;
 
-MovingModusActions(Plane plane) {
+MovingModusActions(Hextoken plane) {
   this.plane = plane;
 }
 
@@ -14,5 +15,9 @@ public abstract Action getActions();
 
 public Vector2FromHex getPosFor(Hex hex) {
   return new Vector2FromHex(hex);
+}
+
+protected Bewegungsplan getBewegungsplan() {
+  return plane.ge; //movingtoken
 }
 }
