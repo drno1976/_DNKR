@@ -1,6 +1,7 @@
 package dnkr.dpap.data.games;
 import dnkr.dpap.model.tokens.Torpedo;
 import dnkr.dpap.model.tokens.planes.Plane;
+import dnkr.libhex.hex.FacedHex;
 
 public class TorpedoFabrik extends DataFabrik {
 public TorpedoFabrik(GameData data) {
@@ -9,7 +10,9 @@ public TorpedoFabrik(GameData data) {
 
 public void createFrom(Plane plane) {
   final Torpedo torpedo = new Torpedo(calculateId(plane));
-  torpedo.getHexOrt().getHex().setLike(plane.getHexOrt().getHex());
+  final FacedHex start = plane.getHexOrt().getHex();
+  torpedo.getHexOrt().getHex().setLike(start);
+  torpedo.getBewegungsplan().setZielHex(start.getNextHex(9));
   getData().getMovingHextokenMap().put(torpedo);
 }
 

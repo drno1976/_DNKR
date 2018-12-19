@@ -4,6 +4,7 @@ import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.FpsLabel;
 import dnkr.dpap.ui.base.actors.HasMovingReplay;
 import dnkr.dpap.ui.base.actors.SelectionMarker;
+import dnkr.dpap.ui.screens.sky.layers.SkyScreenLayers;
 
 public class SkyActorManager extends ActorManager implements HasMovingReplay {
 private final SkyScreen screen;

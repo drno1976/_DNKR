@@ -1,4 +1,6 @@
-package dnkr.dpap.ui.screens.sky;
+package dnkr.dpap.ui.screens.sky.layers;
+import dnkr.dpap.ui.screens.sky.SkyActorManager;
+
 public class SkyScreenLayers {
 public final PlaneLayer planeLayer;
 public final WegplanLayer wegplanLayer;

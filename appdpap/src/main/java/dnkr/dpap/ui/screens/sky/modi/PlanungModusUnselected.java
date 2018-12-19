@@ -11,15 +11,6 @@ import dnkr.libhex.hex.Hex;
 public class PlanungModusUnselected extends PlanungModus {
 public PlanungModusUnselected(SkyScreen skyScreen) {
   super(skyScreen);
-
-}
-
-private void doClickedNext() {
-  System.out.println("Clicked NEXT");
-  final Collection<Plane> list = getPlaneListen().getPlanesOnMap().asList();
-  if (list.isEmpty()) return;
-  getPlaneSelection().setSelected(list.iterator().next());
-  setModusTo(getModusFor(getPlaneSelection().getSelected()));
 }
 
 @Override
@@ -29,6 +20,16 @@ public void begin() {
   getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new DonePlanungClickedFab(getSkyScreen())));
   getMenuButtonUi().addButton(getFabFabrik().getNextFab(v -> doClickedNext()));
   getSkyScreen().getActorManager().getSelectionMarker().doDeactivate();
+  getSkyScreen().getActorManager().getLayers().wegplanLayer.show();
+  getSkyScreen().getActorManager().getLayers().wegplanLayer.doModelChanged();
+}
+
+private void doClickedNext() {
+  System.out.println("Clicked NEXT");
+  final Collection<Plane> list = getPlaneListen().getPlanesOnMap().asList();
+  if (list.isEmpty()) return;
+  getPlaneSelection().setSelected(list.iterator().next());
+  setModusTo(getModusFor(getPlaneSelection().getSelected()));
 }
 
 @Override

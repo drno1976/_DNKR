@@ -19,6 +19,7 @@ public void onClick(View v) {
   
   //check Spielende
   //verzweige gemäß resultat
+  getSkyScreen().getActorManager().getLayers().wegplanLayer.show();
   getSkyScreen().getActorManager().doModelChanged();
   //ändere actors
   getSkyScreen().setModusTo(new PlanungModusUnselected(getSkyScreen()));

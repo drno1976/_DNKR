@@ -173,5 +173,11 @@ public Facing getFacing() {
   return new Facing(facing);
 }
 
-
+public FacedHex getNextHex(int steps) {
+  FacedHex hex = this;
+  for (int i = 0; i < steps; i++) {
+    hex = hex.getNextHex();
+  }
+  return hex;
+}
 }

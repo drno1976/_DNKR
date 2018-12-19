@@ -11,6 +11,7 @@ public ResolvingModus(SkyScreen skyScreen) {
 public void begin() {
   getSkyScreen().getActorManager().getSelectionMarker().doDeactivate();
   new ShootingModusResolver().doResolve();
+  getSkyScreen().getActorManager().doModelChanged();
   getSkyScreen().setModusTo(new MovingModusReady(getSkyScreen()));
 }
 }

@@ -1,7 +1,7 @@
-package dnkr.dpap.ui.screens.sky;
+package dnkr.dpap.ui.screens.sky.layers;
 import dnkr.appbase.gdx.actors.ActorManager;
 
-class MovingHextokenLayer extends MovingReplayLayer {
+public class MovingHextokenLayer extends MovingReplayLayer {
 public MovingHextokenLayer(ActorManager actorManager) {
   super(actorManager);
   doModelChanged();

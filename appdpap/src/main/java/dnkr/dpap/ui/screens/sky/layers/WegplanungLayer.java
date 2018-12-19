@@ -1,4 +1,4 @@
-package dnkr.dpap.ui.screens.sky;
+package dnkr.dpap.ui.screens.sky.layers;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.CenteredImage;
 import dnkr.appbase.gdx.actors.FacedHexCenteredImage;
@@ -8,6 +8,7 @@ import dnkr.dpap.data.games.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import dnkr.dpap.ui.assets.DpapAssets;
 import static dnkr.dpap.ui.assets.DpapAssets.MARKER_ENDPUNKTRICHTUNG;
+import dnkr.dpap.ui.screens.sky.Bewegungsfeld;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hex.Hex;
 

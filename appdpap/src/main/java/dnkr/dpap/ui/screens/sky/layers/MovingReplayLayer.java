@@ -1,4 +1,4 @@
-package dnkr.dpap.ui.screens.sky;
+package dnkr.dpap.ui.screens.sky.layers;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.Layer;

@@ -14,6 +14,8 @@ public void begin() {
   getActionButtonUi().addButton(getFabFabrik().getPlayFab(v -> doClickedPlay()));
   getMenuButtonUi().addButton(getFabFabrik().getDoneAllFab(new DoneMovingClickedFab(getSkyScreen())));
   getSkyScreen().getActorManager().getSelectionMarker().doDeactivate();
+  getSkyScreen().getActorManager().getLayers().wegplanLayer.removeChildrenFromStage();
+  //getSkyScreen().getActorManager().getLayers().wegplanungLayer.removeChildrenFromStage();
 }
 
 private void doClickedPlay() {

@@ -9,8 +9,9 @@ import dnkr.dpap.ui.base.actions.HexpfadMovingActions;
 public class PlaneVisual extends MovingReplayHextokenVisual {
 public PlaneVisual(ActorManager actorManager, Plane plane) {
   super(actorManager, plane);
-  final Image main = new CenteredImage(getTexture(PlaneTextureIds.getIds().getIdFor(plane)));
-  addActor(main);
+  doModelChanged();
+//  final Image main = new CenteredImage(getTexture(PlaneTextureIds.getIds().getIdFor(plane)));
+//  addActor(main);
 //  resetMoving();
 }
 

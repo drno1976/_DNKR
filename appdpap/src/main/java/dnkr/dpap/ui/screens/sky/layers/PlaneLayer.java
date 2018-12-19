@@ -1,10 +1,10 @@
-package dnkr.dpap.ui.screens.sky;
+package dnkr.dpap.ui.screens.sky.layers;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.dpap.data.games.Games;
 import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.base.actors.PlaneVisual;
 
-class PlaneLayer extends MovingReplayLayer {
+public class PlaneLayer extends MovingReplayLayer {
 public PlaneLayer(ActorManager actorManager) {
   super(actorManager);
   doModelChanged();

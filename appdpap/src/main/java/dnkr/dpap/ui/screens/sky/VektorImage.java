@@ -4,7 +4,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
 import dnkr.libhex.hex.FacedHex;
 
-class VektorImage extends Image {
+public class VektorImage extends Image {
 public VektorImage(TextureRegion region, FacedHex von, FacedHex zu) {
   super(region);
   setOrigin(Align.bottom);

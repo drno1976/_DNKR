@@ -6,7 +6,4 @@ public abstract class MovingReplayHextokenVisual extends HextokenVisual implemen
 public MovingReplayHextokenVisual(ActorManager actorManager, Hextoken hextoken) {
   super(actorManager, hextoken);
 }
-//public MovingHextoken getMovingHextoken() {
-//  return (MovingHextoken) getUserObject();
-//}
 }

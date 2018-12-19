@@ -1,4 +1,4 @@
-package dnkr.dpap.ui.screens.sky;
+package dnkr.dpap.ui.screens.sky.layers;
 import dnkr.appbase.base.MovingHextoken;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.dpap.data.games.Games;

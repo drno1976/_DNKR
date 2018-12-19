@@ -5,8 +5,6 @@ import dnkr.dpap.model.tokens.planes.Plane;
 public class ShootingModusResolver extends AbstractResolver {
 @Override
 public void doResolve() {
-//  ermittleKollisionen();
-//  entferneKollidierte();
   starteTorpedoes();
 }
 

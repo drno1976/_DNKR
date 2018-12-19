@@ -15,6 +15,7 @@ public void onClick(View v) {
   getMenuButtonUi().removeButton("DoneAll");
   getMenuButtonUi().removeButton("Next");
   getSkyScreen().getActorManager().getSelectionMarker().doDeactivate();
+  getLayers().wegplanLayer.hide();
   getLayers().wegplanLayer.removeChildrenFromStage();
   System.out.println("Change to resolve");
   getActionButtonUi().removeAll();

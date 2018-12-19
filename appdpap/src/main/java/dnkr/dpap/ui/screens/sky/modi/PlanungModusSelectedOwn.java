@@ -8,7 +8,14 @@ import dnkr.libhex.hex.Hex;
 public class PlanungModusSelectedOwn extends PlanungModus {
 public PlanungModusSelectedOwn(SkyScreen skyScreen) {
   super(skyScreen);
+}
 
+@Override
+public void begin() {
+  getSkyScreen().getActorManager().getSelectionMarker().doActivate();
+  getSkyScreen().getActorManager().getLayers().wegplanLayer.doModelChanged();
+  getActionButtonUi().removeAll();
+  getActionButtonUi().addButton(getFabFabrik().getMoveFab(v -> doClickedMoveplotting()));
 }
 
 private void doClickedMoveplotting() {
@@ -18,14 +25,6 @@ private void doClickedMoveplotting() {
 
 private void doClear() {
   getActionButtonUi().removeAll();
-}
-
-@Override
-public void begin() {
-  getSkyScreen().getActorManager().getSelectionMarker().doActivate();
-  getSkyScreen().getActorManager().getLayers().wegplanLayer.doModelChanged();
-  getActionButtonUi().removeAll();
-  getActionButtonUi().addButton(getFabFabrik().getMoveFab(v -> doClickedMoveplotting()));
 }
 
 @Override
