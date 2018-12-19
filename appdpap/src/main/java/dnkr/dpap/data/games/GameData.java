@@ -1,12 +1,12 @@
 package dnkr.dpap.data.games;
-import dnkr.appbase.base.HextokenMap;
+import dnkr.appbase.base.MovingHextokenMap;
 import dnkr.dpap.data.uistates.UiState;
 import dnkr.dpap.model.tokens.planes.PlaneTypes;
 
 public class GameData {
 private final UiState uiState;
 private final PlaneListen planeListen;
-private final HextokenMap hextokenMap;
+private final MovingHextokenMap movingHextokenMap;
 
 public MetaDaten getMetaDaten() {
   return metaDaten;
@@ -20,7 +20,7 @@ public GameData() {
   uiState = new UiState();
   planeListen = new PlaneListen(this);
   metaDaten = new MetaDaten();
-  hextokenMap = new HextokenMap();
+  movingHextokenMap = new MovingHextokenMap();
 }
 
 public UiState getUiState() {
@@ -39,7 +39,7 @@ public PlaneTypes getPlaneTypes() {
   return planeTypes;
 }
 
-public HextokenMap getHextokenMap() {
-  return hextokenMap;
+public MovingHextokenMap getMovingHextokenMap() {
+  return movingHextokenMap;
 }
 }

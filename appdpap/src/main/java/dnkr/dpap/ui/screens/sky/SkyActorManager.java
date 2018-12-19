@@ -2,10 +2,10 @@ package dnkr.dpap.ui.screens.sky;
 import android.support.annotation.NonNull;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.FpsLabel;
-import dnkr.dpap.ui.base.actors.MovingReplay;
+import dnkr.dpap.ui.base.actors.HasMovingReplay;
 import dnkr.dpap.ui.base.actors.SelectionMarker;
 
-public class SkyActorManager extends ActorManager implements MovingReplay {
+public class SkyActorManager extends ActorManager implements HasMovingReplay {
 private final SkyScreen screen;
 private final SelectionMarker selectionMarker;
 private final SkyScreenLayers layers;
@@ -24,7 +24,7 @@ public void fillStage() {
   addToStage(layers.wegplanLayer);
   addToStage(layers.planeLayer);
   addToStage(layers.wegplanungLayer);
-  addToStage(layers.hextokenLayer);
+  addToStage(layers.movingHextokenLayer);
   addToStage(new FpsLabel());
 }
 
@@ -34,19 +34,19 @@ public SelectionMarker getSelectionMarker() {
 
 public void prepareMoving() {
   layers.planeLayer.prepareMoving();
-  layers.hextokenLayer.prepareMoving();
+  layers.movingHextokenLayer.prepareMoving();
 }
 
 public void resetMoving() {
   layers.planeLayer.resetMoving();
-  layers.hextokenLayer.resetMoving();
+  layers.movingHextokenLayer.resetMoving();
 }
 
 @Override
 public void doModelChanged() {
   layers.planeLayer.doModelChanged();
   layers.wegplanLayer.doModelChanged();
-  layers.hextokenLayer.doModelChanged();
+  layers.movingHextokenLayer.doModelChanged();
 }
 
 public SkyScreenLayers getLayers() {

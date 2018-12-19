@@ -1,10 +1,10 @@
 package dnkr.dpap.model.tokens;
-import dnkr.appbase.base.Hextoken;
+import dnkr.appbase.base.MovingHextoken;
 import dnkr.dpap.model.bewegungen.TorpedoBewegungsplan;
 import dnkr.libhex.HexOrt;
 import dnkr.libhex.routen.Bewegungsplan;
 
-public class Torpedo extends Hextoken {
+public class Torpedo extends MovingHextoken {
 private final HexOrt hexOrt;
 private final Bewegungsplan bewegungsplan;
 

@@ -10,7 +10,7 @@ public TorpedoFabrik(GameData data) {
 public void createFrom(Plane plane) {
   final Torpedo torpedo = new Torpedo(calculateId(plane));
   torpedo.getHexOrt().getHex().setLike(plane.getHexOrt().getHex());
-  getData().getHextokenMap().put(torpedo);
+  getData().getMovingHextokenMap().put(torpedo);
 }
 
 private String calculateId(Plane plane) {

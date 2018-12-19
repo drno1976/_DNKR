@@ -1,5 +1,5 @@
 package dnkr.dpap.ui.base.actors;
-public interface MovingReplay {
+public interface HasMovingReplay {
 void prepareMoving();
 
 void resetMoving();
