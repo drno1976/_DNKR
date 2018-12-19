@@ -1,6 +1,6 @@
 package dnkr.appbase.gdx.actors;
 import com.badlogic.gdx.graphics.Texture;
-import dnkr.libbase.IdObject;
+import dnkr.libhex.ids.IdObject;
 
 public abstract class IdGroupVisual extends Layer {
 public IdGroupVisual(ActorManager actorManager, IdObject idObject) {

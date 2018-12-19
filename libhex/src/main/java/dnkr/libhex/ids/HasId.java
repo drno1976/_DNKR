@@ -1,4 +1,4 @@
-package dnkr.libbase;
+package dnkr.libhex.ids;
 interface HasId {
 String getId();
 }

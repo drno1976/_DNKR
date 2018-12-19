@@ -1,7 +1,7 @@
 package dnkr.appbase.gdx.actors;
-import dnkr.libbase.IdObject;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hex.Hex;
+import dnkr.libhex.ids.IdObject;
 
 public abstract class HexGroupVisual extends IdGroupVisual {
 public HexGroupVisual(ActorManager actorManager, IdObject idObject) {

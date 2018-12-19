@@ -3,7 +3,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.appbase.gdx.actors.Layer;
 import dnkr.dpap.ui.base.actors.HasMovingReplay;
-import dnkr.dpap.ui.base.actors.MovingHextokenVisual;
+import dnkr.dpap.ui.base.actors.MovingReplayHextokenVisual;
 
 abstract class MovingReplayLayer extends Layer implements HasMovingReplay {
 public MovingReplayLayer(ActorManager actorManager) {
@@ -12,13 +12,13 @@ public MovingReplayLayer(ActorManager actorManager) {
 
 public void prepareMoving() {
   for (Actor child : this.getChildren()) {
-    ((MovingHextokenVisual) child).prepareMoving();
+    ((MovingReplayHextokenVisual) child).prepareMoving();
   }
 }
 
 public void resetMoving() {
   for (Actor child : this.getChildren()) {
-    ((MovingHextokenVisual) child).resetMoving();
+    ((MovingReplayHextokenVisual) child).resetMoving();
   }
 }
 }

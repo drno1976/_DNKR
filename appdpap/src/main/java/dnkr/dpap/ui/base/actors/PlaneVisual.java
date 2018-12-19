@@ -6,7 +6,7 @@ import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.assets.PlaneTextureIds;
 import dnkr.dpap.ui.base.actions.HexpfadMovingActions;
 
-public class PlaneVisual extends MovingHextokenVisual {
+public class PlaneVisual extends MovingReplayHextokenVisual {
 public PlaneVisual(ActorManager actorManager, Plane plane) {
   super(actorManager, plane);
   final Image main = new CenteredImage(getTexture(PlaneTextureIds.getIds().getIdFor(plane)));
@@ -20,14 +20,14 @@ public void prepareMoving() {
   this.addAction(new HexpfadMovingActions(getPlane()).getActions());
 }
 
-private Plane getPlane() {
-  return (Plane) getUserObject();
-}
-
 @Override
 public void resetMoving() {
   this.clearActions();
   placeByHexOrt();
+}
+
+private Plane getPlane() {
+  return (Plane) getUserObject();
 }
 
 @Override

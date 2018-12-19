@@ -1,6 +1,6 @@
 package dnkr.dpap.model.tokens.planes;
 import dnkr.dpap.model.bewegungen.PlaneManoevers;
-import dnkr.libbase.IdObject;
+import dnkr.libhex.ids.IdObject;
 
 public class PlaneType extends IdObject {
 private final PlaneManoevers planeManoevers;

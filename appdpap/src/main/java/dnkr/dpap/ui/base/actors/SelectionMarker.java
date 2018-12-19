@@ -7,7 +7,7 @@ import dnkr.appbase.gdx.actors.HexGroupVisual;
 import dnkr.dpap.data.games.Games;
 import dnkr.dpap.data.uistates.PlaneSelection;
 import dnkr.dpap.ui.assets.DpapAssets;
-import dnkr.libbase.IdObject;
+import dnkr.libhex.ids.IdObject;
 
 public class SelectionMarker extends HexGroupVisual {
 public SelectionMarker(ActorManager actorManager) {

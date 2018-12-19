@@ -1,4 +1,4 @@
-package dnkr.libbase;
+package dnkr.libhex.ids;
 public class IdObject implements HasId {
 private final String id;
 
