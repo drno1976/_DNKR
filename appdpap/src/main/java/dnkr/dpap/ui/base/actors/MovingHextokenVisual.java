@@ -10,15 +10,18 @@ public class MovingHextokenVisual extends MovingReplayHextokenVisual {
 public MovingHextokenVisual(ActorManager actorManager, MovingHextoken movingHextoken) {
   super(actorManager, movingHextoken);
   doModelChanged();
-//  resetMoving();
 }
 
 @Override
 public void doModelChanged() {
   removeChildrenFromStage();
+  buildVisual();
+  placeByHexOrt();
+}
+
+public void buildVisual() {
   final Image main = new CenteredImage(getTexture(DpapAssets.GENERICTEXTURE_PNG));
   addActor(main);
-  resetMoving();
 }
 
 @Override

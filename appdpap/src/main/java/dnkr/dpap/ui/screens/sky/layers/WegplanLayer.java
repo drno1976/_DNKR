@@ -8,6 +8,7 @@ import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.assets.DpapAssets;
 import static dnkr.dpap.ui.assets.DpapAssets.MARKER_ENDPUNKTRICHTUNG;
 import dnkr.dpap.ui.screens.sky.VektorImage;
+import dnkr.dpap.ui.screens.sky.layers.base.HideableLayer;
 import dnkr.libhex.hex.FacedHex;
 import dnkr.libhex.hexes.GeparsteHexRoute;
 

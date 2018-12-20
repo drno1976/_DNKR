@@ -3,6 +3,7 @@ import dnkr.appbase.gdx.actors.ActorManager;
 import dnkr.dpap.data.games.Games;
 import dnkr.dpap.model.tokens.planes.Plane;
 import dnkr.dpap.ui.base.actors.PlaneVisual;
+import dnkr.dpap.ui.screens.sky.layers.base.MovingReplayLayer;
 
 public class PlaneLayer extends MovingReplayLayer {
 public PlaneLayer(ActorManager actorManager) {

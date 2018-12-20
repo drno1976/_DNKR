@@ -1,5 +1,6 @@
 package dnkr.dpap.ui.screens.sky.layers;
 import dnkr.dpap.ui.screens.sky.SkyActorManager;
+import dnkr.dpap.ui.screens.sky.layers.base.MovingHextokenLayer;
 
 public class SkyScreenLayers {
 public final PlaneLayer planeLayer;
