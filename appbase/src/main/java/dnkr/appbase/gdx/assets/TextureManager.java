@@ -34,6 +34,8 @@ public Texture loadDirekt(String pfad) {
     texture = assetManager.get(pfad, Texture.class);
   } catch (Exception e) {
     e.printStackTrace();
+    //System.err.println("e = " + e);
+    Log.e(getClass().getName(), "Failed assetget: " + pfad);
     texture = new Texture(16,16, Pixmap.Format.RGBA8888);  //noch dunkel machen?
     
   }

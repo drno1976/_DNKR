@@ -14,7 +14,7 @@ public TorpedoVisual(ActorManager actorManager, Torpedo plane) {
 
 @Override
 public void buildVisual() {
-  final Image main = new CenteredImage(getTexture(DpapAssets.TORPEDO));
+  final Image main = new CenteredImage(getTexture(DpapAssets.MARKER_ENDPUNKTRICHTUNG));
   addActor(main);
 }
 
